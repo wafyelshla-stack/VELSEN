@@ -110,7 +110,7 @@
 <header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
 <div class="flex items-center gap-3 justify-start">
 <a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ asset('images/logo.svg') }}"/>
+<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.svg') }}"/>
 <span class="text-2xl md:text-3xl font-extrabold text-primary hidden md:inline-block tracking-wide">Velsen</span>
 </a>
 </div>
@@ -194,7 +194,7 @@
 </a>
 </div>
 <div class="flex-1 hidden md:block rounded-sm overflow-hidden">
-<div class="bg-cover bg-center w-full h-full min-h-[160px] rounded-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHHBOS7_0XHW8Zeg1KXB5ZJ4Q4E1UXOZqi9So9iFQJqPFotd8vF0BM8pe_2ECNkzNzgqPnwQttZvo2slrGWwtRP7TvuKaGNHvxge3yv3Vv6_qfAI8gCHUIbP4AAPyIMN6Ug2yR9f9jjrR-ihL1TtDAmxtUUwplVzv_8nd0LO_rVzR8ETqQDqOnYjOn3g4JZepaRpB561dWGvUe264cMsoAOwNXKkucNAZx68ABMT6liRQwTJOaoYLW');"></div>
+<div class="bg-cover bg-center w-full h-full min-h-[160px] rounded-sm" style="background-image: url('{{ \App\Models\SiteSetting::url('service_img_residential', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') }}');"></div>
 </div>
 </div>
 </div>
