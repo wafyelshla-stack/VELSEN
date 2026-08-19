@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="ro"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velsen - Curățenie Profesională</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&family=Manrope:wght@600;700&family=Work+Sans:wght@400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Manrope:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#001b44",
+                        "surface": "#fcf9f8",
+                        "primary-fixed": "#d8e2ff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "secondary-container": "#fdca56",
+                        "inverse-primary": "#aec6ff",
+                        "on-secondary-container": "#735500",
+                        "on-tertiary-fixed": "#191c1d",
+                        "secondary-fixed": "#ffdf9e",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface-variant": "#434750",
+                        "tertiary": "#1a1d1e",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "secondary": "#795900",
+                        "background": "#fcf9f8",
+                        "tertiary-container": "#2f3233",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001a42",
+                        "surface-container-high": "#eae7e7",
+                        "outline-variant": "#c4c6d2",
+                        "inverse-surface": "#313030",
+                        "on-secondary-fixed": "#261a00",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-container": "#989a9b",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "primary-fixed-dim": "#aec6ff",
+                        "primary-container": "#002f6c",
+                        "on-primary-fixed-variant": "#224583",
+                        "surface-variant": "#e5e2e1",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "surface-container": "#f0eded",
+                        "on-background": "#1c1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#3c5d9c",
+                        "on-error": "#ffffff",
+                        "outline": "#747781",
+                        "on-surface": "#1c1b1b",
+                        "on-primary-container": "#7999dc",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed-dim": "#f1bf4c",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-padding-desktop": "120px",
+                        "section-padding-mobile": "64px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "headline-sm": ["Manrope"],
+                        "body-lg": ["Work Sans"],
+                        "button-text": ["Hanken Grotesk"],
+                        "display-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button-text": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center px-gutter py-4 w-full max-w-container-max-width mx-auto bg-surface dark:bg-surface border-b border-primary/10 dark:border-outline-variant flat no shadows">
+<div class="flex items-center gap-4">
+<img alt="Velsen Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa5cngqi0pUXRd3FUkxEaohK5Yje_2GWFCepP2zcsidU0-qxUYVhiurek8fYqPhUr_5C3ITKN1fk_5sQ0bpSc22xdPMy9SGNx0kLQfiVOjJCCLNRoS_8-HPZAcBvPFVOA1pLiUVg2U_jY4nuRzeU9Do6eIAZnrYfLFhiTFpsutBH57n8LYeoqM7H7mIkAE0RVDc5PNYvmgR64x5RuHcqeiB0P3oK0lyCLI5pYrbaZnPq3OnGMOOV1KuboOBZe8LacvzA"/>
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-inverse-primary hidden md:inline-block">Velsen</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold pb-1 text-label-caps font-label-caps hover:text-secondary transition-colors duration-300 opacity-80 transition-all" href="#">Acasă</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary text-label-caps font-label-caps hover:text-secondary transition-colors duration-300" href="#">Servicii</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary text-label-caps font-label-caps hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<button class="bg-secondary text-on-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary/90 transition-colors hidden md:block">
+            Cere o Ofertă
+        </button>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLt2qUTA4Tqq80W7lyYWb7Uk_wzBQjnXzV89sCvWAoDpded7O3k-PwRc0tYIRvIxRj9X9L1hRNAugr6f6xnKGPO4GyI2I61AnNg46WYnjdd9DG0eJa9FgKtSgecC4ARLxzf5u8t8rt7hEzfnqvNuQ9dTtohVaPkWDhSE_AxH5qzKY9Dvcw39p_0uikIdqs76-z24LAxmbvqRBILQkriozaWWoR_UjFJ7nNfn1nq5IEesmR_5D5L6QG51qq0');">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto py-section-padding-mobile md:py-section-padding-desktop">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">
+                Excelență Instituțională în Curățenie Profesională
+            </h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-2xl mx-auto">
+                Servicii de curățenie de înaltă precizie pentru facilități medicale, spații comerciale și reședințe de lux. Standarde riguroase, rezultate impecabile.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary text-on-secondary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary/90 transition-colors">
+                    Solicitați o Evaluare
+                </button>
+<button class="bg-transparent border border-white text-white font-button-text text-button-text px-8 py-4 rounded hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="play_circle">play_circle</span>
+                    Vedeți Standardele Noastre
+                </button>
+</div>
+</div>
+</section>
+<!-- Stats / Highlights Section -->
+<section class="bg-white py-16 border-b border-primary/5">
+<div class="max-w-container-max-width mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="verified_user">verified_user</span>
+<span class="font-headline-md text-headline-md text-primary">100+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">Clienți Corporate</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="local_hospital">local_hospital</span>
+<span class="font-headline-md text-headline-md text-primary">ISO</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">Standard Medical</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-headline-md text-headline-md text-primary">5 Ani</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">Experiență Premium</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="support_agent">support_agent</span>
+<span class="font-headline-md text-headline-md text-primary">24/7</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">Suport Dedicat</span>
+</div>
+</div>
+</section>
+<!-- Services Overview -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface px-gutter max-w-container-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Servicii Specializate</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                Oferim soluții adaptate pentru medii care necesită cel mai înalt nivel de igienă și prezentare.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="bg-white border border-outline-variant/30 rounded p-8 hover:border-secondary transition-colors group shadow-sm hover:shadow-md cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="domain">domain</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Comercial & Office</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Creăm un mediu de lucru impecabil pentru echipele dvs. și o primă impresie remarcabilă pentru clienți.
+                </p>
+<span class="text-secondary font-button-text text-button-text flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Detalii <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-white border border-outline-variant/30 rounded p-8 hover:border-secondary transition-colors group shadow-sm hover:shadow-md cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary text-white text-xs font-label-caps px-3 py-1 rounded-bl">Specializat</div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="healing">healing</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Facilități Medicale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Protocoale stricte de dezinfecție și sanitizare conform standardelor hospital-grade pentru clinici și laboratoare.
+                </p>
+<span class="text-secondary font-button-text text-button-text flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Detalii <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-white border border-outline-variant/30 rounded p-8 hover:border-secondary transition-colors group shadow-sm hover:shadow-md cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="home_work">home_work</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Reșidențial Lux</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Îngrijire meticuloasă pentru proprietăți premium, utilizând produse sigure și echipamente de ultimă generație.
+                </p>
+<span class="text-secondary font-button-text text-button-text flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Detalii <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="inline-block border border-primary text-primary font-button-text text-button-text px-8 py-3 rounded hover:bg-primary/5 transition-colors" href="#">
+                Vezi toate serviciile
+            </a>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-white py-section-padding-mobile md:py-section-padding-desktop border-t border-primary/10">
+<div class="max-w-container-max-width mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Stabiliți o Evaluare Gratuită</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                    Fiecare spațiu are nevoi unice. Contactați-ne pentru a discuta cum Velsen poate ridica standardele de igienă ale facilității dumneavoastră. Vă vom răspunde în maxim 2 ore lucrătoare.
+                </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="call">call</span>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Telefon</span>
+<span class="font-body-md text-body-md text-primary font-bold">+40 (700) 123 456</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="mail">mail</span>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Email</span>
+<span class="font-body-md text-body-md text-primary font-bold">contact@velsen.ro</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="location_on">location_on</span>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Sediu Central</span>
+<span class="font-body-md text-body-md text-primary">Strada Preciziei Nr. 12, București</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-lg border border-outline-variant/30 relative">
+<div class="absolute inset-0 bg-primary/5 -z-10 rounded-lg transform translate-x-4 translate-y-4"></div>
+<form class="space-y-6">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Nume Complet</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-b-2 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-primary placeholder-on-surface-variant/50 transition-all" placeholder="Introduceți numele" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Telefon</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-b-2 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-primary placeholder-on-surface-variant/50 transition-all" placeholder="Număr de contact" type="tel"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Tip Spațiu</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-b-2 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-primary transition-all">
+<option>Comercial / Birouri</option>
+<option>Medical</option>
+<option>Rezidențial</option>
+<option>Altul</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Detalii Suplimentare</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-b-2 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-primary placeholder-on-surface-variant/50 transition-all resize-none" placeholder="Cum vă putem ajuta?" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-button-text text-button-text py-4 rounded hover:bg-primary/90 transition-colors" type="button">
+                        Trimite Solicitarea
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-padding-mobile md:py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start gap-8 bg-primary dark:bg-tertiary">
+<div class="text-on-primary dark:text-on-tertiary">
+<div class="text-headline-sm font-headline-sm text-secondary mb-4">Velsen</div>
+<p class="font-body-md text-body-md text-on-primary/80 max-w-sm mb-6">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
+<p class="font-body-md text-body-md text-on-primary/60 text-sm">© 2024 Velsen Servicii de Curățenie Profesională. Toate drepturile rezervate.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary mb-4">Servicii</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200" href="#">Servicii Rezidențiale</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200" href="#">Servicii Medicale</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200" href="#">Curățenie Comercială</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary mb-4">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200" href="#">Termeni și Condiții</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200" href="#">Politică de Confidențialitate</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
