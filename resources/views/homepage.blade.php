@@ -301,73 +301,34 @@
 </section>
 <!-- Contact Section -->
 <section id="contact" class="bg-white py-section-padding-mobile md:py-section-padding-desktop border-t border-primary/5">
-<div class="max-w-container-max-width mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div>
+<div class="max-w-container-max-width mx-auto px-gutter text-center">
 <span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-2 block">Consultație</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-4">Stabiliți o Evaluare Gratuită</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 font-light leading-relaxed">
-                    Fiecare spațiu are nevoi unice. Contactați-ne pentru a discuta cum Velsen poate ridica standardele de igienă ale facilității dumneavoastră. Vă vom răspunde în maxim 2 ore lucrătoare.
-                </p>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<div class="bg-surface w-10 h-10 rounded-full flex items-center justify-center border border-primary/10 shrink-0">
-<span class="material-symbols-outlined text-secondary-container text-xl font-light" data-icon="call">call</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Contactați-ne Pentru o Evaluare Gratuită</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+    Fiecare spațiu are nevoi unice. Echipa Velsen vă stă la dispoziție pentru a stabili un plan optim de curățenie profesională.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-6 rounded-sm border border-primary/10 shadow-sm flex flex-col items-center text-center group hover:border-secondary/30 transition-all duration-300">
+<div class="bg-white w-14 h-14 rounded-full flex items-center justify-center border border-primary/10 mb-4 text-secondary shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="call">call</span>
 </div>
-<div>
-<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-0.5">Telefon</span>
-<a href="tel:+40724101196" class="font-body-md text-body-md text-primary font-semibold hover:text-secondary-container transition-colors">+40 (724) 101 196</a>
+<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-1">Telefon</span>
+<a href="tel:+40724101196" class="font-body-md text-lg text-primary font-bold hover:text-secondary transition-colors">+40 (724) 101 196</a>
 </div>
+<div class="bg-surface p-6 rounded-sm border border-primary/10 shadow-sm flex flex-col items-center text-center group hover:border-secondary/30 transition-all duration-300">
+<div class="bg-white w-14 h-14 rounded-full flex items-center justify-center border border-primary/10 mb-4 text-secondary shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="mail">mail</span>
 </div>
-<div class="flex items-start gap-4">
-<div class="bg-surface w-10 h-10 rounded-full flex items-center justify-center border border-primary/10 shrink-0">
-<span class="material-symbols-outlined text-secondary-container text-xl font-light" data-icon="mail">mail</span>
+<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-1">Email</span>
+<a href="mailto:info@velsengroup.ro" class="font-body-md text-lg text-primary font-bold hover:text-secondary transition-colors">info@velsengroup.ro</a>
 </div>
-<div>
-<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-0.5">Email</span>
-<a href="mailto:info@velsengroup.ro" class="font-body-md text-body-md text-primary font-semibold hover:text-secondary-container transition-colors">info@velsengroup.ro</a>
+<div class="bg-surface p-6 rounded-sm border border-primary/10 shadow-sm flex flex-col items-center text-center group hover:border-secondary/30 transition-all duration-300">
+<div class="bg-white w-14 h-14 rounded-full flex items-center justify-center border border-primary/10 mb-4 text-secondary shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
 </div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-1">Sediu Central</span>
+<span class="font-body-md text-lg text-primary font-bold">București, România</span>
 </div>
-<div class="flex items-start gap-4">
-<div class="bg-surface w-10 h-10 rounded-full flex items-center justify-center border border-primary/10 shrink-0">
-<span class="material-symbols-outlined text-secondary-container text-xl font-light" data-icon="location_on">location_on</span>
-</div>
-<div>
-<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-0.5">Sediu Central</span>
-<span class="font-body-md text-body-md text-primary font-semibold">București, România</span>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-surface p-8 rounded-sm border border-primary/10 shadow-lg shadow-primary/5 relative">
-<h3 class="font-headline-sm text-headline-sm text-primary mb-6 border-b border-primary/10 pb-3">Formular de Contact</h3>
-<form class="space-y-5">
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface-variant mb-1.5 text-xs uppercase tracking-wider">Nume Complet</label>
-<input class="w-full bg-white border border-outline-variant/50 focus:border-secondary-container focus:ring-1 focus:ring-secondary-container/50 px-3 py-2 font-body-md text-primary placeholder-on-surface-variant/40 transition-all rounded-sm font-light" placeholder="Introduceți numele" type="text"/>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface-variant mb-1.5 text-xs uppercase tracking-wider">Telefon</label>
-<input class="w-full bg-white border border-outline-variant/50 focus:border-secondary-container focus:ring-1 focus:ring-secondary-container/50 px-3 py-2 font-body-md text-primary placeholder-on-surface-variant/40 transition-all rounded-sm font-light" placeholder="Număr de contact" type="tel"/>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface-variant mb-1.5 text-xs uppercase tracking-wider">Tip Spațiu</label>
-<select class="w-full bg-white border border-outline-variant/50 focus:border-secondary-container focus:ring-1 focus:ring-secondary-container/50 px-3 py-2 font-body-md text-primary transition-all rounded-sm font-light appearance-none">
-<option>Comercial / Birouri</option>
-<option>Medical</option>
-<option>Rezidențial</option>
-<option>Altul</option>
-</select>
-</div>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface-variant mb-1.5 text-xs uppercase tracking-wider">Detalii Suplimentare</label>
-<textarea class="w-full bg-white border border-outline-variant/50 focus:border-secondary-container focus:ring-1 focus:ring-secondary-container/50 px-3 py-2 font-body-md text-primary placeholder-on-surface-variant/40 transition-all resize-none rounded-sm font-light" placeholder="Cum vă putem ajuta?" rows="3"></textarea>
-</div>
-<button class="w-full bg-secondary-container text-on-secondary-container font-button-text text-button-text uppercase tracking-widest py-3 rounded-sm shadow-md shadow-secondary/30 hover:bg-secondary-container/90 transition-all hover:shadow-lg mt-2" type="button">
-                        Trimite Solicitarea
-</button>
-</form>
 </div>
 </div>
 </section>
