@@ -112,18 +112,18 @@
 <span class="text-2xl md:text-3xl font-extrabold text-primary hidden md:inline-block tracking-wide">Velsen</span>
 </a>
 </div>
-<nav class="hidden md:flex items-center justify-center gap-8">
-<a class="relative py-2 text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300 group" href="/">
+<nav class="hidden md:flex items-center justify-center gap-10">
+<a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/">
 <span>Acasă</span>
-<span class="absolute bottom-0 left-0 w-full h-[2.5px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+<span class="absolute bottom-0 left-0 w-full h-[3px] bg-[#e05a10] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
-<a class="relative py-2 text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300 group" href="/servicii">
+<a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/servicii">
 <span>Servicii</span>
-<span class="absolute bottom-0 left-0 w-full h-[2.5px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+<span class="absolute bottom-0 left-0 w-full h-[3px] bg-[#e05a10] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
-<a class="relative py-2 text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300 group" href="/despre-noi">
+<a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/despre-noi">
 <span>Despre Noi</span>
-<span class="absolute bottom-0 left-0 w-full h-[2.5px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+<span class="absolute bottom-0 left-0 w-full h-[3px] bg-[#e05a10] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
 </nav>
 <div class="hidden md:block"></div>
