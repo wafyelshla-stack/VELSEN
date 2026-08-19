@@ -108,7 +108,7 @@
 <header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
 <div class="flex items-center gap-3 justify-start">
 <a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVTkcBHAfFGp2sgMkFTxsUdc09Z77vKXP4DrtyLoobFYcDFvKRDHmP3XY3ulj9D1jcM25QQEYq9iFcqDEyhZWFS6E-MH6VMRseOt-W_f9L1D_2Olcw9lPi8rK6MbGVv6YCwMtduZjBFpNdoKnpKpIv9SaEYrJZPcjMm_8W3E-r1VxPJ-Zr1p2L7VKCCehZWKydo9VWAvxcy2wY5u-FrDCB7xhZCVf-qTguRhY_cj-sw7pba3a8VlBA1icdyMOEiK7BCA"/>
+<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ asset('images/logo.svg') }}"/>
 <span class="text-2xl md:text-3xl font-extrabold text-primary hidden md:inline-block tracking-wide">Velsen</span>
 </a>
 </div>

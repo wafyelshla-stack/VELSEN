@@ -110,7 +110,7 @@
 <header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
 <div class="flex items-center gap-3 justify-start">
 <a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBepOv6goKWdSzhhpn19TKvTqUfdNqAKroO6NcFvarG4vztITUrtYeWceKW62EPJio3Tl-dAJy5LgHZJAQDJrqYmDy1jJsESzuVirNsQnrxtPG_2jzLjoxhHRa3yz-GEdrPlqYhhc0XEES0WbiVNWIY8E35gBK6YgN0eP-NBswZ9WNBp7EwSJKN0dVWPaATYp9LdmEUV_Vf3XyFwC_UkkDlaZBdpjeaT6B5A_KC-1Vjy9iz-T8uwLEIeXsu2qsD-eNkTg"/>
+<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ asset('images/logo.svg') }}"/>
 <span class="text-2xl md:text-3xl font-extrabold text-primary hidden md:inline-block tracking-wide">Velsen</span>
 </a>
 </div>
