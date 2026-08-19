@@ -196,9 +196,9 @@
 <div class="hidden md:block"></div>
 </header>
 <!-- Hero Section -->
-<section class="relative min-h-[55vh] flex items-center justify-center py-12 md:py-16">
-<div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLt2qUTA4Tqq80W7lyYWb7Uk_wzBQjnXzV89sCvWAoDpded7O3k-PwRc0tYIRvIxRj9X9L1hRNAugr6f6xnKGPO4GyI2I61AnNg46WYnjdd9DG0eJa9FgKtSgecC4ARLxzf5u8t8rt7hEzfnqvNuQ9dTtohVaPkWDhSE_AxH5qzKY9Dvcw39p_0uikIdqs76-z24LAxmbvqRBILQkriozaWWoR_UjFJ7nNfn1nq5IEesmR_5D5L6QG51qq0');">
-<div class="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/55 to-primary/85 backdrop-blur-[1px]"></div>
+<section class="relative min-h-[60vh] flex items-center justify-center py-14 md:py-20">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('images/hero-bg.png') }}');">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/85 backdrop-blur-[1px]"></div>
 </div>
 <div class="relative z-10 text-center px-gutter max-w-4xl mx-auto py-8">
 <span class="block text-secondary-container font-label-caps text-label-caps tracking-widest uppercase mb-4 drop-shadow-md">Curățenie Profesională de Elită</span>
