@@ -25,7 +25,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-4">
                 <a href="/" target="_blank" class="flex items-center gap-3 group">
-                    <img src="{{ asset('images/logo.svg') }}" alt="Velsen" class="h-9 w-auto bg-white rounded p-1">
+                    <img src="{{ asset('images/logo.svg') }}" alt="Velsen" class="h-9 w-auto" style="background: transparent;">
                     <span class="font-extrabold text-xl tracking-wide text-white">Velsen Admin</span>
                 </a>
                 <span class="bg-white/10 text-xs px-2.5 py-1 rounded-full font-mono text-secondary">Media Manager</span>

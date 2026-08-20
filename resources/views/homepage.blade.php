@@ -168,14 +168,57 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
         }
+
+        @keyframes pageLoadFadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pageLoadScaleIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .page-load-animate {
+            animation: pageLoadFadeUp 0.7s ease-out both;
+        }
+
+        .page-load-animate-delay-1 {
+            animation-delay: 0.08s;
+        }
+
+        .page-load-animate-delay-2 {
+            animation-delay: 0.16s;
+        }
+
+        .page-load-animate-delay-3 {
+            animation-delay: 0.24s;
+        }
+
+        .hero-animate {
+            animation: pageLoadScaleIn 0.8s ease-out both;
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="page-load-animate">
 <!-- TopNavBar -->
 <header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
 <div class="flex items-center gap-3 justify-start">
 <a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.svg') }}"/>
+<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" style="background: transparent;" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.svg') }}"/>
 <span class="text-2xl md:text-3xl font-extrabold text-primary hidden md:inline-block tracking-wide">Velsen</span>
 </a>
 </div>
@@ -200,15 +243,15 @@
 <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('{{ \App\Models\SiteSetting::url('hero_bg', 'images/hero-bg.png') }}');">
 <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/85 backdrop-blur-[1px]"></div>
 </div>
-<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto py-8">
-<span class="block text-secondary-container font-label-caps text-label-caps tracking-widest uppercase mb-4 drop-shadow-md">Curățenie Profesională de Elită</span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-5 drop-shadow-lg leading-tight">
+<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto py-8 hero-animate">
+<span class="block text-secondary-container font-label-caps text-label-caps tracking-widest uppercase mb-4 drop-shadow-md page-load-animate page-load-animate-delay-1">Curățenie Profesională de Elită</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-5 drop-shadow-lg leading-tight page-load-animate page-load-animate-delay-2">
                 Excelență Instituțională în Curățenie Profesională
             </h1>
-<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-2xl mx-auto drop-shadow font-light">
+<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-2xl mx-auto drop-shadow font-light page-load-animate page-load-animate-delay-3">
                 Servicii de curățenie de înaltă precizie pentru facilități medicale, spații comerciale și reședințe de lux. Standarde riguroase, rezultate impecabile.
             </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<div class="flex flex-col sm:flex-row gap-4 justify-center page-load-animate page-load-animate-delay-3">
 <a href="#contact" class="bg-secondary-container text-on-secondary-container font-button-text text-button-text uppercase tracking-widest px-7 py-3 rounded-sm shadow-md shadow-secondary/30 hover:bg-secondary-container/90 transition-all hover:shadow-lg inline-block">
                     Solicitați o Evaluare
 </a>
@@ -221,7 +264,7 @@
 </section>
 <!-- Stats / Highlights Section -->
 <section class="bg-surface py-10 border-b border-primary/10 relative -mt-10 z-20 max-w-5xl mx-auto px-5">
-<div class="bg-white rounded-lg shadow-md shadow-primary/5 border border-primary/5 py-8 px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-primary/10">
+<div class="bg-white rounded-lg shadow-md shadow-primary/5 border border-primary/5 py-8 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center justify-items-center divide-y md:divide-y-0 md:divide-x divide-primary/10">
 <div class="flex flex-col items-center">
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="verified_user">verified_user</span>
 <span class="font-headline-md text-headline-md text-primary mb-0.5">100+</span>
@@ -233,10 +276,7 @@
 <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Standard Medical</span>
 </div>
 <div class="flex flex-col items-center">
-<span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="workspace_premium">workspace_premium</span>
-<span class="font-headline-md text-headline-md text-primary mb-0.5">5 Ani</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Experiență Premium</span>
-</div>
+<!-- workspace_premium stat removed -->
 <div class="flex flex-col items-center">
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="support_agent">support_agent</span>
 <span class="font-headline-md text-headline-md text-primary mb-0.5">24/7</span>
@@ -376,5 +416,6 @@
 </div>
 </div>
 </footer>
+</div>
 </body>
 </html>

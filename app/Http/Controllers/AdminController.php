@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\SiteSetting;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -13,7 +15,7 @@ class AdminController extends Controller
      */
     public function showLogin()
     {
-        if (session('admin_authenticated')) {
+        if (Auth::check() && Auth::user()->is_admin) {
             return redirect()->route('admin.dashboard');
         }
 
@@ -26,15 +28,30 @@ class AdminController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required',
-            'password' => 'required',
+            'email' => ['required', 'string'],
+            'password' => ['required', 'string'],
         ]);
 
-        // Default admin credentials: admin@velsen.ro / admin123
-        if (($request->email === 'admin@velsen.ro' || $request->email === 'admin') && $request->password === 'admin123') {
-            session(['admin_authenticated' => true]);
+        $credentials = [
+            'password' => $request->password,
+        ];
 
+        $user = User::where('name', $request->email)
+            ->orWhere('email', $request->email)
+            ->first();
+
+        if ($user && $user->is_admin && Auth::attempt(['email' => $user->email, 'password' => $request->password])) {
             return redirect()->route('admin.dashboard')->with('success', 'Autentificare reușită!');
+        }
+
+        if (Auth::attempt(array_merge($credentials, ['email' => $request->email])) || Auth::attempt(array_merge($credentials, ['name' => $request->email]))) {
+            $authenticatedUser = Auth::user();
+
+            if ($authenticatedUser && $authenticatedUser->is_admin) {
+                return redirect()->route('admin.dashboard')->with('success', 'Autentificare reușită!');
+            }
+
+            Auth::logout();
         }
 
         return back()->withErrors(['email' => 'Date de autentificare incorecte.'])->withInput();
@@ -45,7 +62,7 @@ class AdminController extends Controller
      */
     public function logout()
     {
-        session()->forget('admin_authenticated');
+        Auth::logout();
 
         return redirect()->route('admin.login')->with('success', 'Ați fost deconectat cu succes.');
     }
@@ -55,6 +72,10 @@ class AdminController extends Controller
      */
     public function index()
     {
+        if (! Auth::check() || ! Auth::user()->is_admin) {
+            return redirect()->route('admin.login');
+        }
+
         $imageFields = [
             'hero_bg' => [
                 'label' => 'Imagine Fundal Hero (Pagina Principală)',

@@ -101,9 +101,23 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
         }
+
+        @keyframes pageLoadFadeUp {
+            0% { opacity: 0; transform: translateY(22px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-load-animate {
+            animation: pageLoadFadeUp 0.7s ease-out both;
+        }
+
+        .page-load-animate-delay-1 { animation-delay: 0.08s; }
+        .page-load-animate-delay-2 { animation-delay: 0.16s; }
+        .page-load-animate-delay-3 { animation-delay: 0.24s; }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="page-load-animate">
 <!-- TopNavBar -->
 <header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
 <div class="flex items-center gap-3 justify-start">
@@ -131,12 +145,24 @@
 <main class="w-full">
 <!-- Hero / Header Section -->
 <section class="w-full max-w-container-max-width mx-auto px-gutter py-section-padding-mobile md:py-section-padding-desktop">
-<div class="max-w-3xl">
-<span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-3 block">Despre Velsen</span>
-<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary mb-4 leading-tight"> Standarde Clinice. Excelență Operațională. </h1>
-<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed font-light">
-                Suntem dedicați furnizării de servicii de curățenie profesională la cele mai înalte standarde din industrie. Cu un portofoliu axat pe medii critice, de la facilități medicale la spații de birouri premium, misiunea noastră este de a asigura igienă impecabilă și siguranță absolută.
-            </p>
+<div class="max-w-5xl page-load-animate page-load-animate-delay-1">
+    <div class="flex items-start gap-6">
+        <div class="flex-1">
+            <span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-3 block">Despre Velsen</span>
+            <h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg leading-tight mb-4">
+                <span class="block text-primary">Standarde clinice,</span>
+                <span class="block text-secondary">Precizie absolută.</span>
+            </h1>
+        </div>
+
+        <div class="hidden md:flex items-center justify-center w-24 h-24 rounded-full border-2 border-secondary/30 bg-secondary/5 text-secondary shadow-sm">
+            <span class="material-symbols-outlined text-4xl">verified</span>
+        </div>
+    </div>
+
+    <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed font-light max-w-4xl">
+        La Velsen, redefinim conceptul de curățenie profesională. Nu oferim doar servicii de igienizare, ci garantăm medii sterile, sigure și impecabile pentru clienții noștri din sectorul medical, rezidențial și comercial.
+    </p>
 </div>
 </section>
 <!-- Bento Grid - Core Values & Stats -->
@@ -264,5 +290,6 @@
 </div>
 </div>
 </footer>
+</div>
 </body>
 </html>

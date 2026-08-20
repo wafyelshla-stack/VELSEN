@@ -103,9 +103,23 @@
         .gold-accent { border-top: 2px solid #795900; }
         .service-card:hover .service-icon { color: #795900; transform: scale(1.05); transition: all 0.3s ease; }
         .service-card:hover { border-color: #795900; transition: border-color 0.3s ease; }
+
+        @keyframes pageLoadFadeUp {
+            0% { opacity: 0; transform: translateY(22px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-load-animate {
+            animation: pageLoadFadeUp 0.7s ease-out both;
+        }
+
+        .page-load-animate-delay-1 { animation-delay: 0.08s; }
+        .page-load-animate-delay-2 { animation-delay: 0.16s; }
+        .page-load-animate-delay-3 { animation-delay: 0.24s; }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="page-load-animate">
 <!-- TopNavBar -->
 <header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
 <div class="flex items-center gap-3 justify-start">
@@ -132,7 +146,7 @@
 </header>
 <!-- Page Header -->
 <section class="w-full max-w-container-max-width mx-auto px-gutter py-section-padding-mobile md:py-section-padding-desktop">
-<div class="max-w-3xl">
+<div class="max-w-3xl page-load-animate page-load-animate-delay-1">
 <h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary mb-4 leading-tight">Excelență în Curățenie Profesională</h1>
 <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed font-light">
                 Soluții premium de igienizare și întreținere, adaptate celor mai exigente standarde. Serviciile noastre sunt concepute pentru a asigura un mediu impecabil, fie că este vorba de spații comerciale, rezidențiale sau industriale de înaltă precizie.
@@ -293,5 +307,6 @@
 </div>
 </div>
 </footer>
+</div>
 </body>
 </html>
