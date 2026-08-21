@@ -1,9 +1,122 @@
 @import 'tailwindcss';
-
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Site-wide responsive foundation */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+    max-width: 100%;
+}
+
+/* Make the existing desktop navigation usable on phones too. */
+@media (max-width: 767px) {
+    header {
+        display: flex !important;
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem !important;
+    }
+
+    header > div:first-child {
+        justify-content: center;
+    }
+
+    header nav {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem 0.75rem;
+        width: 100%;
+    }
+
+    header nav a {
+        padding: 0.35rem 0.2rem;
+        font-size: 0.9rem;
+        line-height: 1.25rem;
+    }
+
+    section {
+        max-width: 100vw;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+        overflow-wrap: anywhere;
+    }
+
+    /* Keep hero content comfortably inside narrow screens. */
+    section.min-h-\[60vh\] {
+        min-height: 34rem;
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+
+    /* Prevent long contact details and footer columns from widening the page. */
+    a,
+    address,
+    footer {
+        overflow-wrap: anywhere;
+    }
+
+    footer {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Make tap targets easier to use on touch screens. */
+    a,
+    button,
+    input,
+    select,
+    textarea {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        min-height: 2.75rem;
+    }
+}
+
+@media (max-width: 420px) {
+    header nav {
+        gap: 0.2rem 0.55rem;
+    }
+
+    header nav a {
+        font-size: 0.8rem;
+    }
+
+    section.min-h-\[60vh\] {
+        min-height: 31rem;
+    }
 }
