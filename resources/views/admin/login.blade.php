@@ -23,7 +23,7 @@
     <div class="w-full max-w-md bg-white rounded-xl shadow-xl border border-gray-100 p-8">
         <div class="text-center mb-8">
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 text-primary mb-3">
-                <img src="{{ asset('images/logo.svg') }}" alt="Velsen" class="h-10 w-auto">
+                <img src="{{ asset('images/logo.png') }}" alt="Velsen" class="h-10 w-auto">
             </div>
             <h1 class="text-2xl font-bold text-primary">Panou de Administrare</h1>
             <p class="text-sm text-gray-500 mt-1">Introduceți datele de acces pentru a gestiona site-ul</p>

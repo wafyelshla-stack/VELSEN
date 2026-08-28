@@ -107,13 +107,16 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
-<div class="flex items-center gap-3 justify-start">
+<header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
+<div class="max-w-container-max-width mx-auto px-4 md:px-gutter py-3 grid grid-cols-2 md:grid-cols-3 items-center">
+<div class="flex items-center justify-start">
 <a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.svg') }}"/>
-<span class="text-2xl md:text-3xl font-extrabold text-primary hidden md:inline-block tracking-wide">Velsen</span>
+<img alt="Velsen Logo" class="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" style="background: transparent;" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
+<span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-wide">Velsen</span>
 </a>
 </div>
+
+<!-- Desktop Navigation (Centered in Middle) -->
 <nav class="hidden md:flex items-center justify-center gap-10">
 <a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/">
 <span>Acasă</span>
@@ -128,8 +131,37 @@
 <span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
 </nav>
-<div class="hidden md:block"></div>
+
+<!-- Mobile Menu Toggle Button -->
+<div class="flex items-center justify-end">
+<button id="menu-toggle" aria-label="Deschide Meniul" class="md:hidden text-primary p-2 rounded-lg hover:bg-primary/5 focus:outline-none transition-colors cursor-pointer">
+<span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+
+<!-- Mobile Navigation Drawer (Centered in Middle) -->
+<div id="mobile-menu" class="hidden md:hidden border-t border-primary/10 bg-surface/98 backdrop-blur-lg px-4 py-4 flex flex-col items-center justify-center space-y-2 text-center">
+<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/">Acasă</a>
+<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/servicii">Servicii</a>
+<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/despre-noi">Despre Noi</a>
+</div>
 </header>
+
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    if (toggleBtn && mobileMenu && menuIcon) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuIcon.textContent = isHidden ? 'menu' : 'close';
+      });
+    }
+  });
+</script>
 <!-- Page Header -->
 <section class="w-full max-w-container-max-width mx-auto px-gutter py-section-padding-mobile md:py-section-padding-desktop">
 <div class="max-w-3xl">

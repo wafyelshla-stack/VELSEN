@@ -215,13 +215,16 @@
 <body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 <div class="page-load-animate">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 grid grid-cols-1 md:grid-cols-3 items-center px-gutter py-2.5 w-full max-w-container-max-width mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-primary/10 dark:border-outline-variant flat no shadows">
-<div class="flex items-center gap-3 justify-start">
+<header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
+<div class="max-w-container-max-width mx-auto px-4 md:px-gutter py-3 grid grid-cols-2 md:grid-cols-3 items-center">
+<div class="flex items-center justify-start">
 <a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" style="background: transparent;" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.svg') }}"/>
-<span class="text-2xl md:text-3xl font-extrabold text-primary hidden md:inline-block tracking-wide">Velsen</span>
+<img alt="Velsen Logo" class="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" style="background: transparent;" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
+<span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-wide">Velsen</span>
 </a>
 </div>
+
+<!-- Desktop Navigation (Centered in Middle) -->
 <nav class="hidden md:flex items-center justify-center gap-10">
 <a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/">
 <span>Acasă</span>
@@ -236,67 +239,92 @@
 <span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
 </nav>
-<div class="hidden md:block"></div>
+
+<!-- Mobile Menu Toggle Button -->
+<div class="flex items-center justify-end">
+<button id="menu-toggle" aria-label="Deschide Meniul" class="md:hidden text-primary p-2 rounded-lg hover:bg-primary/5 focus:outline-none transition-colors cursor-pointer">
+<span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+
+<!-- Mobile Navigation Drawer (Centered in Middle) -->
+<div id="mobile-menu" class="hidden md:hidden border-t border-primary/10 bg-surface/98 backdrop-blur-lg px-4 py-4 flex flex-col items-center justify-center space-y-2 text-center">
+<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/">Acasă</a>
+<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/servicii">Servicii</a>
+<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/despre-noi">Despre Noi</a>
+</div>
 </header>
+
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    if (toggleBtn && mobileMenu && menuIcon) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuIcon.textContent = isHidden ? 'menu' : 'close';
+      });
+    }
+  });
+</script>
+
 <!-- Hero Section -->
-<section class="relative min-h-[60vh] flex items-center justify-center py-14 md:py-20">
+<section class="relative min-h-[60vh] flex items-center justify-center py-14 md:py-20 px-4">
 <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('{{ \App\Models\SiteSetting::url('hero_bg', 'images/hero-bg.png') }}');">
 <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/85 backdrop-blur-[1px]"></div>
 </div>
-<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto py-8 hero-animate">
+<div class="relative z-10 text-center max-w-4xl mx-auto py-8 hero-animate">
 <span class="block text-secondary-container font-label-caps text-label-caps tracking-widest uppercase mb-4 drop-shadow-md page-load-animate page-load-animate-delay-1">Curățenie Profesională de Elită</span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-5 drop-shadow-lg leading-tight page-load-animate page-load-animate-delay-2">
+<h1 class="font-display-lg text-2xl sm:text-3xl md:text-display-lg text-white mb-5 drop-shadow-lg leading-tight page-load-animate page-load-animate-delay-2">
                 Excelență Instituțională în Curățenie Profesională
             </h1>
-<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-2xl mx-auto drop-shadow font-light page-load-animate page-load-animate-delay-3">
+<p class="font-body-lg text-sm sm:text-base text-white/90 mb-8 max-w-2xl mx-auto drop-shadow font-light page-load-animate page-load-animate-delay-3 px-2">
                 Servicii de curățenie de înaltă precizie pentru facilități medicale, spații comerciale și reședințe de lux. Standarde riguroase, rezultate impecabile.
             </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center page-load-animate page-load-animate-delay-3">
-<a href="#contact" class="bg-secondary-container text-on-secondary-container font-button-text text-button-text uppercase tracking-widest px-7 py-3 rounded-sm shadow-md shadow-secondary/30 hover:bg-secondary-container/90 transition-all hover:shadow-lg inline-block">
+<div class="flex flex-col sm:flex-row gap-4 justify-center px-4 page-load-animate page-load-animate-delay-3">
+<a href="#contact" class="bg-secondary-container text-on-secondary-container font-button-text text-button-text uppercase tracking-widest px-7 py-3 rounded-sm shadow-md shadow-secondary/30 hover:bg-secondary-container/90 transition-all hover:shadow-lg inline-block text-center">
                     Solicitați o Evaluare
 </a>
-<a href="/despre-noi" class="bg-transparent border border-white/50 text-white font-button-text text-button-text uppercase tracking-widest px-7 py-3 rounded-sm hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+<a href="/despre-noi" class="bg-transparent border border-white/50 text-white font-button-text text-button-text uppercase tracking-widest px-7 py-3 rounded-sm hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2 backdrop-blur-sm text-center">
 <span class="material-symbols-outlined text-lg" data-icon="play_circle">play_circle</span>
                     Vedeți Standardele Noastre
 </a>
 </div>
 </div>
 </section>
+
 <!-- Stats / Highlights Section -->
-<section class="bg-surface py-10 border-b border-primary/10 relative -mt-10 z-20 max-w-5xl mx-auto px-5">
-<div class="bg-white rounded-lg shadow-md shadow-primary/5 border border-primary/5 py-8 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center justify-items-center divide-y md:divide-y-0 md:divide-x divide-primary/10">
-<div class="flex flex-col items-center">
+<section class="bg-surface py-6 md:py-10 border-b border-primary/10 relative md:-mt-10 z-20 max-w-4xl mx-auto px-4">
+<div class="bg-white rounded-lg shadow-md shadow-primary/5 border border-primary/5 py-6 px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 text-center justify-items-center divide-y sm:divide-y-0 sm:divide-x divide-primary/10">
+<div class="flex flex-col items-center w-full pb-4 sm:pb-0">
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="verified_user">verified_user</span>
 <span class="font-headline-md text-headline-md text-primary mb-0.5">100+</span>
 <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Clienți Corporate</span>
 </div>
-<div class="flex flex-col items-center">
-<span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="local_hospital">local_hospital</span>
-<span class="font-headline-md text-headline-md text-primary mb-0.5">ISO</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Standard Medical</span>
-</div>
-<div class="flex flex-col items-center">
-<!-- workspace_premium stat removed -->
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center w-full pt-4 sm:pt-0">
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="support_agent">support_agent</span>
 <span class="font-headline-md text-headline-md text-primary mb-0.5">24/7</span>
 <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Suport Dedicat</span>
 </div>
 </div>
 </section>
+
 <!-- Services Overview -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface px-gutter max-w-container-max-width mx-auto">
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface px-4 md:px-gutter max-w-container-max-width mx-auto">
 <div class="text-center mb-12 flex flex-col items-center">
 <span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-2">Expertiza Noastră</span>
 <h2 class="font-headline-md text-headline-md text-primary mb-3">Servicii Specializate</h2>
 <div class="w-12 h-0.5 bg-secondary-container mb-4"></div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto font-light">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto font-light px-2">
                 Oferim soluții adaptate pentru medii care necesită cel mai înalt nivel de igienă și prezentare.
             </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <!-- Service Card 1 -->
-<a href="/servicii" class="bg-white border border-primary/5 rounded-sm p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
+<a href="/servicii" class="bg-white border border-primary/5 rounded-sm p-6 md:p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary/0 group-hover:bg-secondary-container transition-all duration-300"></div>
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-5 block font-light transform group-hover:scale-105 transition-transform" data-icon="domain">domain</span>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Comercial &amp; Office</h3>
@@ -308,7 +336,7 @@
 </span>
 </a>
 <!-- Service Card 2 -->
-<a href="/servicii" class="bg-primary border border-primary rounded-sm p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-md hover:shadow-xl hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
+<a href="/servicii" class="bg-primary border border-primary rounded-sm p-6 md:p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-md hover:shadow-xl hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
 <div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container text-[10px] font-label-caps px-3 py-1 uppercase tracking-widest rounded-bl-sm">Specializat</div>
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container transition-all duration-300"></div>
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-5 block font-light transform group-hover:scale-105 transition-transform" data-icon="healing">healing</span>
@@ -321,7 +349,7 @@
 </span>
 </a>
 <!-- Service Card 3 -->
-<a href="/servicii" class="bg-white border border-primary/5 rounded-sm p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
+<a href="/servicii" class="bg-white border border-primary/5 rounded-sm p-6 md:p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary/0 group-hover:bg-secondary-container transition-all duration-300"></div>
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-5 block font-light transform group-hover:scale-105 transition-transform" data-icon="home_work">home_work</span>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Reșidențial Lux</h3>
@@ -339,15 +367,16 @@
             </a>
 </div>
 </section>
+
 <!-- Contact Section -->
-<section id="contact" class="bg-white py-section-padding-mobile md:py-section-padding-desktop border-t border-primary/5">
-<div class="max-w-container-max-width mx-auto px-gutter text-center">
+<section id="contact" class="bg-white py-section-padding-mobile md:py-section-padding-desktop border-t border-primary/5 px-4">
+<div class="max-w-container-max-width mx-auto px-2 text-center">
 <span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-2 block">Consultație</span>
 <h2 class="font-headline-md text-headline-md text-primary mb-4">Contactați-ne Pentru o Evaluare Gratuită</h2>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-12 font-light leading-relaxed">
     Fiecare spațiu are nevoi unice. Echipa Velsen vă stă la dispoziție pentru a stabili un plan optim de curățenie profesională.
 </p>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="bg-surface p-6 rounded-sm border border-primary/10 shadow-sm flex flex-col items-center text-center group hover:border-secondary/30 transition-all duration-300">
 <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center border border-primary/10 mb-4 text-secondary shadow-sm group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-2xl" data-icon="call">call</span>
@@ -367,13 +396,14 @@
 <span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
 </div>
 <span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-1">Sediu Central</span>
-<span class="font-body-md text-lg text-primary font-bold">București, România</span>
+<span class="font-body-md text-lg text-primary font-bold">Brașov, România</span>
 </div>
 </div>
 </div>
 </section>
+
 <!-- Footer -->
-<footer class="w-full py-10 md:py-14 px-gutter flex flex-col md:flex-row justify-between items-start gap-8 bg-primary">
+<footer class="w-full py-10 md:py-14 px-4 md:px-gutter flex flex-col md:flex-row justify-between items-start gap-8 bg-primary">
 <div class="text-white max-w-sm">
 <div class="text-headline-sm font-headline-sm text-secondary-container mb-4 tracking-wide">Velsen</div>
 <p class="font-body-md text-body-md text-white/70 mb-4 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
@@ -391,7 +421,7 @@
 </div>
 <p class="font-body-md text-body-md text-white/50 text-xs tracking-wider uppercase">© 2024 Velsen Servicii de Curățenie Profesională. Toate drepturile rezervate.</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full md:w-auto">
 <div>
 <h4 class="font-label-caps text-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs">Contact Direct</h4>
 <ul class="space-y-3">
