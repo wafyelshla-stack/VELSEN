@@ -122,25 +122,25 @@
 <div class="page-load-animate">
 <!-- TopNavBar -->
 <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
-<div class="max-w-container-max-width mx-auto px-4 md:px-gutter py-3 grid grid-cols-2 md:grid-cols-3 items-center">
+<div class="max-w-container-max-width mx-auto px-4 md:px-gutter py-2.5 grid grid-cols-2 md:grid-cols-3 items-center">
 <div class="flex items-center justify-start">
-<a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" style="background: transparent;" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
-<span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-wide">Velsen</span>
+<a href="/" class="flex items-center gap-2.5 sm:gap-3.5 group">
+<img alt="Velsen Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
+<span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-primary tracking-wide">Velsen</span>
 </a>
 </div>
 
 <!-- Desktop Navigation (Centered in Middle) -->
-<nav class="hidden md:flex items-center justify-center gap-10">
-<a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/">
+<nav class="hidden md:flex items-center justify-center gap-8 lg:gap-10">
+<a class="relative py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/">
 <span>Acasă</span>
 <span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
-<a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/servicii">
+<a class="relative py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/servicii">
 <span>Servicii</span>
 <span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
-<a class="relative py-2 text-lg md:text-xl font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/despre-noi">
+<a class="relative py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/despre-noi">
 <span>Despre Noi</span>
 <span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
 </a>
@@ -148,17 +148,17 @@
 
 <!-- Mobile Menu Toggle Button -->
 <div class="flex items-center justify-end">
-<button id="menu-toggle" aria-label="Deschide Meniul" class="md:hidden text-primary p-2 rounded-lg hover:bg-primary/5 focus:outline-none transition-colors cursor-pointer">
-<span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+<button id="menu-toggle" aria-label="Deschide Meniul" class="md:hidden text-primary p-2.5 rounded-lg hover:bg-primary/5 focus:outline-none transition-colors cursor-pointer active:scale-95">
+<span id="menu-icon" class="material-symbols-outlined text-2xl sm:text-3xl">menu</span>
 </button>
 </div>
 </div>
 
 <!-- Mobile Navigation Drawer (Centered in Middle) -->
-<div id="mobile-menu" class="hidden md:hidden border-t border-primary/10 bg-surface/98 backdrop-blur-lg px-4 py-4 flex flex-col items-center justify-center space-y-2 text-center">
-<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/">Acasă</a>
-<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/servicii">Servicii</a>
-<a class="w-full py-3 px-4 text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/despre-noi">Despre Noi</a>
+<div id="mobile-menu" class="hidden md:hidden border-t border-primary/10 bg-surface/98 backdrop-blur-lg px-4 py-3 flex flex-col items-center justify-center space-y-1 text-center shadow-lg">
+<a class="w-full py-2.5 px-4 text-base sm:text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/">Acasă</a>
+<a class="w-full py-2.5 px-4 text-base sm:text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/servicii">Servicii</a>
+<a class="w-full py-2.5 px-4 text-base sm:text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/despre-noi">Despre Noi</a>
 </div>
 </header>
 
@@ -296,12 +296,16 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="w-full py-10 md:py-14 px-gutter flex flex-col md:flex-row justify-between items-start gap-8 bg-primary">
-<div class="text-white max-w-sm">
-<div class="text-headline-sm font-headline-sm text-secondary-container mb-4 tracking-wide">Velsen</div>
-<p class="font-body-md text-body-md text-white/70 mb-4 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
+<footer class="w-full py-10 md:py-14 px-4 md:px-gutter bg-primary text-white">
+<div class="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+<div class="max-w-sm">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Velsen Logo" class="h-10 w-auto object-contain shrink-0" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
+<span class="text-2xl font-extrabold text-white tracking-wide">Velsen</span>
+</div>
+<p class="font-body-md text-body-md text-white/70 mb-5 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
 <!-- Social Links -->
-<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-3">
 <a href="https://www.facebook.com/profile.php?id=61593313353911" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary-container hover:text-white transition-all duration-300">
 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 </a>
@@ -312,31 +316,29 @@
 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
 </a>
 </div>
-<p class="font-body-md text-body-md text-white/50 text-xs tracking-wider uppercase">© 2024 Velsen Servicii de Curățenie Profesională. Toate drepturile rezervate.</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+
 <div>
-<h4 class="font-label-caps text-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs">Contact Direct</h4>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light flex items-center gap-2" href="tel:+40724101196">+40 (724) 101 196</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light flex items-center gap-2" href="mailto:info@velsengroup.ro">info@velsengroup.ro</a></li>
+<h4 class="font-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs font-bold">Navigație Rapidă</h4>
+<ul class="space-y-2.5">
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/">Acasă</a></li>
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/servicii">Servicii</a></li>
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/despre-noi">Despre Noi</a></li>
 </ul>
 </div>
+
 <div>
-<h4 class="font-label-caps text-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs">Servicii</h4>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light" href="/servicii">Servicii Rezidențiale</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light" href="/servicii">Servicii Medicale</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light" href="/servicii">Curățenie Comercială</a></li>
+<h4 class="font-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs font-bold">Contact Direct</h4>
+<ul class="space-y-2.5 mb-4">
+<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="tel:+40724101196"><span class="material-symbols-outlined text-sm text-secondary-container">call</span> +40 (724) 101 196</a></li>
+<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="mailto:info@velsengroup.ro"><span class="material-symbols-outlined text-sm text-secondary-container">mail</span> info@velsengroup.ro</a></li>
+<li><span class="font-body-md text-white/70 font-light flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary-container">location_on</span> Brașov, România</span></li>
 </ul>
 </div>
-<div>
-<h4 class="font-label-caps text-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs">Legal</h4>
-<ul class="space-y-3">
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light" href="#">Termeni și Condiții</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light" href="#">Politică de Confidențialitate</a></li>
-</ul>
 </div>
+
+<div class="max-w-container-max-width mx-auto border-t border-white/10 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-white/50">
+<p>© 2026 Velsen Servicii de Curățenie Profesională. Toate drepturile rezervate.</p>
 </div>
 </footer>
 </div>
