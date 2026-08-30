@@ -113,7 +113,7 @@
 <div class="max-w-container-max-width mx-auto px-4 md:px-gutter py-3 grid grid-cols-2 md:grid-cols-3 items-center">
 <div class="flex items-center justify-start">
 <a href="/" class="flex items-center gap-3.5 group">
-<img alt="Velsen Logo" class="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" style="background: transparent;" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
+<img alt="Velsen Logo" class="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" style="background: transparent;" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"/>
 <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-wide">Velsen</span>
 </a>
 </div>

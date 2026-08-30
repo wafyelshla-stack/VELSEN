@@ -221,7 +221,7 @@
 <div class="max-w-container-max-width mx-auto px-4 md:px-gutter py-2.5 grid grid-cols-2 md:grid-cols-3 items-center">
 <div class="flex items-center justify-start">
 <a href="/" class="flex items-center gap-2.5 sm:gap-3.5 group">
-<img alt="Velsen Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
+<img alt="Velsen Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"/>
 <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-primary tracking-wide">Velsen</span>
 </a>
 </div>
@@ -275,7 +275,7 @@
 
 <!-- Hero Section -->
 <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center py-10 sm:py-14 md:py-20 px-4">
-<div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('{{ \App\Models\SiteSetting::url('hero_bg', 'images/hero-bg.png') }}');">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('{{ \App\Models\SiteSetting::url('hero_bg', 'images/hero-bg.webp') }}');">
 <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/85 backdrop-blur-[1px]"></div>
 </div>
 <div class="relative z-10 text-center max-w-4xl mx-auto py-6 sm:py-8 hero-animate">
@@ -409,7 +409,7 @@
 <div class="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 <div class="max-w-sm">
 <div class="flex items-center gap-3 mb-4">
-<img alt="Velsen Logo" class="h-10 w-auto object-contain shrink-0" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.png') }}"/>
+<img alt="Velsen Logo" class="h-10 w-auto object-contain shrink-0" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"/>
 <span class="text-2xl font-extrabold text-white tracking-wide">Velsen</span>
 </div>
 <p class="font-body-md text-body-md text-white/70 mb-5 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
