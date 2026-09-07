@@ -7,6 +7,7 @@ Route::get('/lang/{locale}', function ($locale) {
     if (in_array($locale, ['ro', 'en'])) {
         session(['locale' => $locale]);
     }
+
     return redirect()->back();
 })->name('lang.switch');
 
@@ -21,6 +22,10 @@ Route::get('/servicii', function () {
 Route::get('/despre-noi', function () {
     return view('about');
 });
+
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
 
 // Admin Authentication Routes
 Route::get('/admin/login', [AdminController::class, 'showLogin'])->name('admin.login');

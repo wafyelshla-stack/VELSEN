@@ -429,7 +429,7 @@
 <div class="flex flex-col gap-4">
 <h4 class="text-label-caps font-label-caps text-on-primary dark:text-on-tertiary mb-2">Legal</h4>
 <a class="text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200 text-body-md font-body-md" href="/">Termeni și Condiții</a>
-<a class="text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200 text-body-md font-body-md" href="/">Politică de Confidențialitate</a>
+<a class="text-on-primary/80 dark:text-on-tertiary/80 hover:text-secondary transition-colors duration-200 text-body-md font-body-md" href="{{ route('privacy-policy') }}">Politică de Confidențialitate</a>
 </div>
     </footer>
 </body>

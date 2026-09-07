@@ -326,6 +326,7 @@
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/">Acasă</a></li>
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/servicii">Servicii</a></li>
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/despre-noi">Despre Noi</a></li>
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}">Politică de Confidențialitate</a></li>
 </ul>
 </div>
 
