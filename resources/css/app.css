@@ -5,6 +5,51 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-body-md: 'Instrument Sans', ui-sans-serif, sans-serif;
+    --font-button-text: 'Instrument Sans', ui-sans-serif, sans-serif;
+    --font-label-caps: 'Instrument Sans', ui-sans-serif, sans-serif;
+    --font-display-lg-mobile: 'Instrument Sans', ui-sans-serif, sans-serif;
+    --font-body-lg: 'Instrument Sans', ui-sans-serif, sans-serif;
+    --font-headline-sm: 'Instrument Sans', ui-sans-serif, sans-serif;
+    --font-display-lg: 'Instrument Sans', ui-sans-serif, sans-serif;
+    --font-headline-md: 'Instrument Sans', ui-sans-serif, sans-serif;
+
+    --text-body-md: 14px;
+    --text-body-md--line-height: 20px;
+    --text-button-text: 14px;
+    --text-button-text--line-height: 20px;
+    --text-label-caps: 12px;
+    --text-label-caps--line-height: 16px;
+    --text-label-caps--letter-spacing: 0.08em;
+    --text-display-lg-mobile: 28px;
+    --text-display-lg-mobile--line-height: 34px;
+    --text-body-lg: 16px;
+    --text-body-lg--line-height: 24px;
+    --text-headline-sm: 20px;
+    --text-headline-sm--line-height: 28px;
+    --text-display-lg: 40px;
+    --text-display-lg--line-height: 48px;
+    --text-headline-md: 26px;
+    --text-headline-md--line-height: 34px;
+
+    --color-primary: #001b44;
+    --color-primary-container: #002f6c;
+    --color-secondary: #e05a10;
+    --color-secondary-container: #e05a10;
+    --color-surface: #fcf9f8;
+    --color-surface-lowest: #ffffff;
+    --color-on-primary: #ffffff;
+    --color-on-secondary: #ffffff;
+    --color-on-secondary-container: #ffffff;
+    --color-on-surface: #1c1b1b;
+    --color-on-surface-variant: #434750;
+    --color-outline-variant: #c4c6d2;
+
+    --spacing-container-max-width: 1200px;
+    --spacing-section-padding-desktop: 64px;
+    --spacing-gutter: 20px;
+    --spacing-section-padding-mobile: 40px;
+    --spacing-base: 8px;
 }
 
 /* Site-wide responsive foundation */

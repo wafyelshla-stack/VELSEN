@@ -6,166 +6,11 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Velsen - Curățenie Profesională</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Manrope:wght@600;700&amp;family=Work+Sans:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-                "on-tertiary-fixed-variant": "#454748",
-                "inverse-primary": "#aec6ff",
-                "surface-container-high": "#eae7e7",
-                "on-secondary-container": "#ffffff",
-                "surface-dim": "#dcd9d9",
-                "surface": "#fcf9f8",
-                "tertiary-fixed-dim": "#c5c7c8",
-                "tertiary": "#1a1d1e",
-                "primary-fixed": "#d8e2ff",
-                "inverse-on-surface": "#f3f0ef",
-                "surface-container-low": "#f6f3f2",
-                "on-surface": "#1c1b1b",
-                "secondary-container": "#e05a10",
-                "tertiary-container": "#2f3233",
-                "surface-container-lowest": "#ffffff",
-                "secondary-fixed": "#ffdf9e",
-                "on-tertiary": "#ffffff",
-                "primary-container": "#002f6c",
-                "on-tertiary-fixed": "#191c1d",
-                "on-primary-fixed-variant": "#224583",
-                "outline-variant": "#c4c6d2",
-                "outline": "#747781",
-                "inverse-surface": "#313030",
-                "surface-container": "#f0eded",
-                "primary-fixed-dim": "#aec6ff",
-                "on-primary-container": "#7999dc",
-                "on-background": "#1c1b1b",
-                "surface-bright": "#fcf9f8",
-                "error-container": "#ffdad6",
-                "secondary-fixed-dim": "#f1bf4c",
-                "on-secondary": "#ffffff",
-                "surface-variant": "#e5e2e1",
-                "tertiary-fixed": "#e1e3e4",
-                "surface-tint": "#3c5d9c",
-                "error": "#ba1a1a",
-                "on-tertiary-container": "#989a9b",
-                "primary": "#001b44",
-                "on-error-container": "#93000a",
-                "on-primary-fixed": "#001a42",
-                "on-error": "#ffffff",
-                "surface-container-highest": "#e5e2e1",
-                "on-secondary-fixed": "#261a00",
-                "secondary": "#e05a10",
-                "on-primary": "#ffffff",
-                "on-surface-variant": "#434750",
-                "background": "#fcf9f8",
-                "on-secondary-fixed-variant": "#5b4300"
-        },
-        "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-        },
-        "spacing": {
-                "container-max-width": "1200px",
-                "section-padding-desktop": "64px",
-                "gutter": "20px",
-                "section-padding-mobile": "40px",
-                "base": "8px"
-        },
-        "fontFamily": {
-                "body-md": [
-                        "Work Sans"
-                ],
-                "button-text": [
-                        "Hanken Grotesk"
-                ],
-                "label-caps": [
-                        "Hanken Grotesk"
-                ],
-                "display-lg-mobile": [
-                        "Manrope"
-                ],
-                "body-lg": [
-                        "Work Sans"
-                ],
-                "headline-sm": [
-                        "Manrope"
-                ],
-                "display-lg": [
-                        "Manrope"
-                ],
-                "headline-md": [
-                        "Manrope"
-                ]
-        },
-        "fontSize": {
-                "body-md": [
-                        "14px",
-                        {
-                                "lineHeight": "20px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "button-text": [
-                        "14px",
-                        {
-                                "lineHeight": "20px",
-                                "fontWeight": "600"
-                        }
-                ],
-                "label-caps": [
-                        "12px",
-                        {
-                                "lineHeight": "16px",
-                                "letterSpacing": "0.08em",
-                                "fontWeight": "700"
-                        }
-                ],
-                "display-lg-mobile": [
-                        "28px",
-                        {
-                                "lineHeight": "34px",
-                                "letterSpacing": "-0.01em",
-                                "fontWeight": "700"
-                        }
-                ],
-                "body-lg": [
-                        "16px",
-                        {
-                                "lineHeight": "24px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-sm": [
-                        "20px",
-                        {
-                                "lineHeight": "28px",
-                                "fontWeight": "600"
-                        }
-                ],
-                "display-lg": [
-                        "40px",
-                        {
-                                "lineHeight": "48px",
-                                "letterSpacing": "-0.02em",
-                                "fontWeight": "700"
-                        }
-                ],
-                "headline-md": [
-                        "26px",
-                        {
-                                "lineHeight": "34px",
-                                "fontWeight": "600"
-                        }
-                ]
-        }
-},
-    },
-  }
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"></noscript>
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
@@ -275,7 +120,8 @@
 
 <!-- Hero Section -->
 <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center py-10 sm:py-14 md:py-20 px-4">
-<div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('{{ \App\Models\SiteSetting::url('hero_bg', 'images/hero-bg.webp') }}');">
+<div class="absolute inset-0 w-full h-full overflow-hidden">
+<img alt="Spațiu profesional impecabil întreținut de Velsen" class="absolute inset-0 h-full w-full object-cover object-center" src="{{ \App\Models\SiteSetting::url('hero_bg', 'images/hero-bg.webp') }}" width="1024" height="1024" fetchpriority="high" decoding="async">
 <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/85 backdrop-blur-[1px]"></div>
 </div>
 <div class="relative z-10 text-center max-w-4xl mx-auto py-6 sm:py-8 hero-animate">
