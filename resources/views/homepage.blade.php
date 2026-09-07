@@ -132,12 +132,12 @@
 <p class="font-body-lg text-xs sm:text-base text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto drop-shadow font-light page-load-animate page-load-animate-delay-3 px-2">
                 Servicii de curățenie de înaltă precizie pentru facilități medicale, spații comerciale și reședințe de lux. Standarde riguroase, rezultate impecabile.
             </p>
-<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 page-load-animate page-load-animate-delay-3">
-<a href="#contact" class="bg-secondary-container text-on-secondary-container font-button-text text-xs sm:text-button-text uppercase tracking-widest px-6 sm:px-7 py-3 rounded-sm shadow-md shadow-secondary/30 hover:bg-secondary-container/90 transition-all hover:shadow-lg inline-block text-center">
+<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 page-load-animate page-load-animate-delay-3 w-full">
+<a href="#contact" class="bg-secondary-container text-on-secondary-container font-button-text text-xs sm:text-button-text uppercase tracking-widest px-6 sm:px-7 py-3 rounded-sm shadow-md shadow-secondary/30 hover:bg-secondary-container/90 transition-all hover:shadow-lg inline-flex items-center justify-center text-center w-full sm:w-auto leading-tight">
                     Solicitați o Evaluare
 </a>
-<a href="/despre-noi" class="bg-transparent border border-white/50 text-white font-button-text text-xs sm:text-button-text uppercase tracking-widest px-6 sm:px-7 py-3 rounded-sm hover:bg-white/10 hover:border-white transition-all flex items-center justify-center gap-2 backdrop-blur-sm text-center">
-<span class="material-symbols-outlined text-base sm:text-lg" data-icon="play_circle">play_circle</span>
+<a href="/despre-noi" class="bg-transparent border border-white/50 text-white font-button-text text-xs sm:text-button-text uppercase tracking-widest px-6 sm:px-7 py-3 rounded-sm hover:bg-white/10 hover:border-white transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm text-center w-full sm:w-auto leading-tight max-w-full">
+<span class="material-symbols-outlined text-base sm:text-lg shrink-0" data-icon="play_circle">play_circle</span>
                     Vedeți Standardele Noastre
 </a>
 </div>
