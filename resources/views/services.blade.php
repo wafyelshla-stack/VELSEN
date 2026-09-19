@@ -287,7 +287,7 @@
 <footer class="w-full py-10 md:py-14 px-gutter flex flex-col md:flex-row justify-between items-start gap-8 bg-primary">
 <div class="text-white max-w-sm">
 <div class="text-headline-sm font-headline-sm text-secondary-container mb-4 tracking-wide">Velsen</div>
-<p class="font-body-md text-body-md text-white/70 mb-4 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
+<p class="font-body-md text-body-md text-white/70 mb-4 font-light leading-relaxed">Standards You Can See. Precizie, încredere și operațiuni bine coordonate.</p>
 <!-- Social Links -->
 <div class="flex items-center gap-4 mb-6">
 <a href="https://www.facebook.com/profile.php?id=61593313353911" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary-container hover:text-white transition-all duration-300">
@@ -307,7 +307,7 @@
 <h4 class="font-label-caps text-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs">Contact Direct</h4>
 <ul class="space-y-3">
 <li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light flex items-center gap-2" href="tel:+40724101196">+40 (724) 101 196</a></li>
-<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light flex items-center gap-2" href="mailto:info@velsengroup.ro">info@velsengroup.ro</a></li>
+<li><a class="font-body-md text-body-md text-white/70 hover:text-secondary-container transition-colors duration-200 font-light flex items-center gap-2" href="mailto:info@veslen-group.ro">info@veslen-group.ro</a></li>
 </ul>
 </div>
 <div>

@@ -64,6 +64,22 @@ body {
     overflow-x: hidden;
 }
 
+footer a[aria-label='Facebook'], footer a[aria-label='Instagram'], footer a[aria-label='LinkedIn'] {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+footer a[aria-label='Facebook']:hover,
+footer a[aria-label='Instagram']:hover,
+footer a[aria-label='LinkedIn']:hover {
+    background-color: #e05a10 !important;
+}
+
+footer a[aria-label='Instagram'] img { width: 1.25rem; height: 1.25rem; filter: none; }
+
+.services-page main > section:nth-child(2) .mt-10 { display: none; }
+.services-page footer .space-y-2\.5 li:last-child { display: none; }
+
 img,
 svg,
 video,

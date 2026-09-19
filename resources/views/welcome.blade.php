@@ -199,7 +199,7 @@
                 </div>
                 <div class="flex flex-col gap-4">
                     <button class="bg-secondary-container text-on-secondary-container font-button-text text-button-text rounded-full min-h-[56px] px-6 flex items-center justify-center gap-2 w-full hover:bg-secondary-container/90 transition-colors shadow-md active:scale-[0.98]">
-                        Cere o Ofertă<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                        Contact<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
                     </button>
                     <button class="bg-white text-primary font-button-text text-button-text rounded-full min-h-[56px] px-6 flex items-center justify-center gap-2 w-full shadow-lg hover:bg-white/90 transition-colors active:scale-[0.98]"> 
                         <span class="material-symbols-outlined text-[20px]">phone</span> Sună Acum 

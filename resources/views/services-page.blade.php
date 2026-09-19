@@ -1,349 +1,65 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<meta charset="utf-8"/>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Servicii Velsen - Curățenie Profesională</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-                "on-tertiary-fixed-variant": "#454748",
-                "inverse-primary": "#aec6ff",
-                "surface-container-high": "#eae7e7",
-                "on-secondary-container": "#ffffff",
-                "surface-dim": "#dcd9d9",
-                "surface": "#fcf9f8",
-                "tertiary-fixed-dim": "#c5c7c8",
-                "tertiary": "#1a1d1e",
-                "primary-fixed": "#d8e2ff",
-                "inverse-on-surface": "#f3f0ef",
-                "surface-container-low": "#f6f3f2",
-                "on-surface": "#1c1b1b",
-                "secondary-container": "#e05a10",
-                "tertiary-container": "#2f3233",
-                "surface-container-lowest": "#ffffff",
-                "secondary-fixed": "#ffdf9e",
-                "on-tertiary": "#ffffff",
-                "primary-container": "#002f6c",
-                "on-tertiary-fixed": "#191c1d",
-                "on-primary-fixed-variant": "#224583",
-                "outline-variant": "#c4c6d2",
-                "outline": "#747781",
-                "inverse-surface": "#313030",
-                "surface-container": "#f0eded",
-                "primary-fixed-dim": "#aec6ff",
-                "on-primary-container": "#7999dc",
-                "on-background": "#1c1b1b",
-                "surface-bright": "#fcf9f8",
-                "error-container": "#ffdad6",
-                "secondary-fixed-dim": "#f1bf4c",
-                "on-secondary": "#ffffff",
-                "surface-variant": "#e5e2e1",
-                "tertiary-fixed": "#e1e3e4",
-                "surface-tint": "#3c5d9c",
-                "error": "#ba1a1a",
-                "on-tertiary-container": "#989a9b",
-                "primary": "#001b44",
-                "on-error-container": "#93000a",
-                "on-primary-fixed": "#001a42",
-                "on-error": "#ffffff",
-                "surface-container-highest": "#e5e2e1",
-                "on-secondary-fixed": "#261a00",
-                "secondary": "#e05a10",
-                "on-primary": "#ffffff",
-                "on-surface-variant": "#434750",
-                "background": "#fcf9f8",
-                "on-secondary-fixed-variant": "#5b4300"
-        },
-        "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-        },
-        "spacing": {
-                "container-max-width": "1200px",
-                "section-padding-desktop": "64px",
-                "gutter": "20px",
-                "section-padding-mobile": "40px",
-                "base": "8px"
-        },
-        "fontFamily": {
-                "body-md": ["Work Sans"],
-                "button-text": ["Hanken Grotesk"],
-                "label-caps": ["Hanken Grotesk"],
-                "display-lg-mobile": ["Manrope"],
-                "body-lg": ["Work Sans"],
-                "headline-sm": ["Manrope"],
-                "display-lg": ["Manrope"],
-                "headline-md": ["Manrope"]
-        },
-        "fontSize": {
-                "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
-                "button-text": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
-                "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
-                "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
-                "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                "headline-md": ["26px", { "lineHeight": "34px", "fontWeight": "600" }]
-        }
-},
-    },
-  }
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Manrope:wght@600;700&amp;family=Work+Sans:wght@400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ $selectedService ? $services[$selectedService]['title'].' | VELSEN' : 'Servicii B2B | VELSEN' }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=Manrope:wght@600;700;800&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 <style>
-        .card-shadow { box-shadow: 0px 10px 25px rgba(0, 27, 68, 0.04); }
-        .gold-accent { border-top: 2px solid #795900; }
-        .service-card:hover .service-icon { color: #795900; transform: scale(1.05); transition: all 0.3s ease; }
-        .service-card:hover { border-color: #795900; transition: border-color 0.3s ease; }
-
-        @keyframes pageLoadFadeUp {
-            0% { opacity: 0; transform: translateY(22px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .page-load-animate {
-            animation: pageLoadFadeUp 0.7s ease-out both;
-        }
-
-        .page-load-animate-delay-1 { animation-delay: 0.08s; }
-        .page-load-animate-delay-2 { animation-delay: 0.16s; }
-        .page-load-animate-delay-3 { animation-delay: 0.24s; }
-    </style>
+.service-hero-grid { background: #fcf9f8; border-bottom: 1px solid rgba(0, 27, 68, .1); }
+.service-hero-grid { position: relative; overflow: hidden; }
+.service-hero-grid::after { content: ''; position: absolute; right: -2rem; bottom: 1.5rem; width: 20rem; height: 2.5rem; background: rgba(224, 90, 16, .08); transform: rotate(-12deg); pointer-events: none; }
+.service-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 18px 35px rgba(0, 27, 68, .12); border-color: rgba(224, 90, 16, .55); }
+.service-card .material-symbols-outlined { display: inline-flex; width: 3rem; height: 3rem; align-items: center; justify-content: center; border-radius: .25rem; background: rgba(224, 90, 16, .1); color: #e05a10; }
+.services-index-section { background: #f3f6fa; }
+.services-index-section .service-card:nth-child(3n + 2) { border-top-color: #001b44; }
+.services-index-section .service-card:nth-child(3n + 2) .material-symbols-outlined { background: rgba(0, 27, 68, .08); color: #001b44; }
+.services-nav-link { position: relative; }
+.services-nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #e05a10; border-radius: 9999px; transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+.services-nav-link:hover::after { transform: scaleX(1); }
+</style>
 </head>
-<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<body class="services-page bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 <div class="page-load-animate">
-<!-- TopNavBar -->
 <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
 <div class="max-w-container-max-width mx-auto px-4 md:px-gutter py-2.5 grid grid-cols-2 md:grid-cols-3 items-center">
-<div class="flex items-center justify-start">
-<a href="/" class="flex items-center gap-2.5 sm:gap-3.5 group">
-<img alt="Velsen Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"/>
-<span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-primary tracking-wide">Velsen</span>
-</a>
+<div class="flex items-center justify-start"><a href="{{ route('home') }}" class="flex items-center gap-2.5 sm:gap-3.5 group"><img alt="Velsen Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"><span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-primary tracking-wide">Velsen</span></a></div>
+<nav class="hidden md:flex items-center justify-center gap-8 lg:gap-10"><a class="services-nav-link py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary" href="{{ route('home') }}">Acasă</a><a class="services-nav-link py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary" href="{{ route('services') }}">Servicii</a><a class="services-nav-link py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary" href="/despre-noi">Despre Noi</a></nav>
+<div class="flex items-center justify-end"><button id="menu-toggle" aria-label="Deschide Meniul" class="md:hidden text-primary p-2.5 rounded-lg hover:bg-primary/5 focus:outline-none"><span id="menu-icon" class="material-symbols-outlined text-2xl sm:text-3xl">menu</span></button></div>
 </div>
-
-<!-- Desktop Navigation (Centered in Middle) -->
-<nav class="hidden md:flex items-center justify-center gap-8 lg:gap-10">
-<a class="relative py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/">
-<span>Acasă</span>
-<span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-</a>
-<a class="relative py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/servicii">
-<span>Servicii</span>
-<span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-</a>
-<a class="relative py-2 text-base md:text-lg font-bold text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="/despre-noi">
-<span>Despre Noi</span>
-<span class="absolute bottom-0 left-0 w-full h-[3px] bg-secondary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-</a>
-</nav>
-
-<!-- Mobile Menu Toggle Button -->
-<div class="flex items-center justify-end">
-<button id="menu-toggle" aria-label="Deschide Meniul" class="md:hidden text-primary p-2.5 rounded-lg hover:bg-primary/5 focus:outline-none transition-colors cursor-pointer active:scale-95">
-<span id="menu-icon" class="material-symbols-outlined text-2xl sm:text-3xl">menu</span>
-</button>
-</div>
-</div>
-
-<!-- Mobile Navigation Drawer (Centered in Middle) -->
-<div id="mobile-menu" class="hidden md:hidden border-t border-primary/10 bg-surface/98 backdrop-blur-lg px-4 py-3 flex flex-col items-center justify-center space-y-1 text-center shadow-lg">
-<a class="w-full py-2.5 px-4 text-base sm:text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/">Acasă</a>
-<a class="w-full py-2.5 px-4 text-base sm:text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/servicii">Servicii</a>
-<a class="w-full py-2.5 px-4 text-base sm:text-lg font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-md transition-colors text-center" href="/despre-noi">Despre Noi</a>
-</div>
+<div id="mobile-menu" class="hidden md:hidden border-t border-primary/10 bg-surface/98 px-4 py-3 flex flex-col items-center justify-center space-y-1 text-center shadow-lg"><a class="w-full py-2.5 px-4 text-base font-bold text-on-surface-variant hover:text-primary rounded-md" href="{{ route('home') }}">Acasă</a><a class="w-full py-2.5 px-4 text-base font-bold text-on-surface-variant hover:text-primary rounded-md" href="{{ route('services') }}">Servicii</a><a class="w-full py-2.5 px-4 text-base font-bold text-on-surface-variant hover:text-primary rounded-md" href="/despre-noi">Despre Noi</a></div>
 </header>
-
-<!-- Script for Mobile Menu Toggle -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    if (toggleBtn && mobileMenu && menuIcon) {
-      toggleBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.toggle('hidden');
-        menuIcon.textContent = isHidden ? 'menu' : 'close';
-      });
-    }
-  });
-</script>
-<!-- Page Header -->
-<section class="w-full max-w-container-max-width mx-auto px-gutter py-section-padding-mobile md:py-section-padding-desktop">
-<div class="max-w-3xl page-load-animate page-load-animate-delay-1">
-<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary mb-4 leading-tight">Excelență în Curățenie Profesională</h1>
-<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed font-light">
-                Soluții premium de igienizare și întreținere, adaptate celor mai exigente standarde. Serviciile noastre sunt concepute pentru a asigura un mediu impecabil, fie că este vorba de spații comerciale, rezidențiale sau industriale de înaltă precizie.
-            </p>
-</div>
-</section>
-<!-- Services Bento Grid -->
-<section class="bg-white py-section-padding-mobile md:py-section-padding-desktop border-y border-outline-variant/30">
-<div class="w-full max-w-container-max-width mx-auto px-gutter">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Commercial -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="business_center">business_center</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Curățenie Comercială</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                        Întreținere profesională pentru clădiri de birouri, centre de afaceri și spații comerciale. Garantăm un mediu de lucru sănătos și o imagine impecabilă.
-                    </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                        Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<!-- Hospitality -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary" style="background-color: rgb(230, 81, 0);"></div>
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="room_service">room_service</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Hospitality &amp; HORECA</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                        Standarde superioare de curățenie pentru hoteluri, restaurante și spații de evenimente. Atenție meticuloasă la detalii pentru o experiență perfectă.
-                    </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                        Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<!-- Industrial -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="factory">factory</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Curățenie Industrială</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                        Echipamente și proceduri specializate pentru hale de producție, depozite și spații logistice. Soluții robuste pentru medii cu cerințe stricte.
-                    </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                        Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<!-- Residential -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden lg:col-span-2">
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary" style="background-color: rgb(230, 81, 0);"></div>
-<div class="flex flex-col md:flex-row gap-6 h-full">
-<div class="flex-1 flex flex-col">
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="villa">villa</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Rezidențial Premium</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                                Servicii de curățenie de lux pentru reședințe, vile și apartamente premium. Personal discret și respect absolut pentru intimitatea dumneavoastră.
-                            </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                                Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<div class="flex-1 hidden md:block rounded-sm overflow-hidden">
-<div class="bg-cover bg-center w-full h-full min-h-[160px] rounded-sm" style="background-image: url('{{ \App\Models\SiteSetting::url('service_img_residential', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') }}');"></div>
-</div>
-</div>
-</div>
-<!-- Window -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="cleaning_services">cleaning_services</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Curățare Fațade &amp; Geamuri</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                        Alpinism utilitar și tehnici moderne pentru curățarea impecabilă a ferestrelor și fațadelor din sticlă.
-                    </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                        Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<!-- Deep Cleaning -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary" style="background-color: rgb(230, 81, 0);"></div>
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="sanitizer">sanitizer</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Curățenie Generală (Deep Clean)</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                        Igienizare profundă și dezinfecție detaliată. Ideală pentru schimbări de sezon, mutări sau reîmprospătare completă.
-                    </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                        Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<!-- Post-Construction -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="construction">construction</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Post-Constructor</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                        Îndepărtarea eficientă a molozului, prafului fin și a resturilor. Transformăm șantierul într-un spațiu gata de utilizare.
-                    </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                        Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<!-- Customized -->
-<div class="service-card group bg-surface-lowest border border-outline-variant/50 rounded-sm p-6 card-shadow flex flex-col h-full relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary" style="background-color: rgb(230, 81, 0);"></div>
-<span class="material-symbols-outlined text-3xl text-primary mb-4 service-icon transition-colors" data-icon="tune">tune</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-3">Soluții Personalizate</h3>
-<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-4 font-light leading-relaxed">
-                        Pachete flexibile de servicii concepute exact pe nevoile specifice ale locației dumneavoastră.
-                    </p>
-<a class="text-label-caps font-label-caps text-secondary inline-flex items-center gap-1.5 mt-auto hover:text-primary transition-colors text-xs" href="/#contact" style="color: rgb(230, 81, 0);">
-                        Detalii Serviciu <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="w-full py-10 md:py-14 px-4 md:px-gutter bg-primary text-white">
-<div class="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-<div class="max-w-sm">
-<div class="flex items-center gap-3 mb-4">
-<img alt="Velsen Logo" class="h-10 w-auto object-contain shrink-0" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"/>
-<span class="text-2xl font-extrabold text-white tracking-wide">Velsen</span>
-</div>
-<p class="font-body-md text-body-md text-white/70 mb-5 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
-<!-- Social Links -->
-<div class="flex items-center gap-3">
-<a href="https://www.facebook.com/profile.php?id=61593313353911" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary-container hover:text-white transition-all duration-300">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-</a>
-<a href="https://www.instagram.com/velsengroup/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary-container hover:text-white transition-all duration-300">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-</a>
-<a href="https://www.linkedin.com/in/velsengroup/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary-container hover:text-white transition-all duration-300">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-</a>
-</div>
-</div>
-
-<div>
-<h4 class="font-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs font-bold">Navigație Rapidă</h4>
-<ul class="space-y-2.5">
-<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/">Acasă</a></li>
-<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/servicii">Servicii</a></li>
-<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/despre-noi">Despre Noi</a></li>
-<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}">Politică de Confidențialitate</a></li>
-</ul>
-</div>
-
-<div>
-<h4 class="font-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs font-bold">Contact Direct</h4>
-<ul class="space-y-2.5 mb-4">
-<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="tel:+40724101196"><span class="material-symbols-outlined text-sm text-secondary-container">call</span> +40 (724) 101 196</a></li>
-<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="mailto:info@velsengroup.ro"><span class="material-symbols-outlined text-sm text-secondary-container">mail</span> info@velsengroup.ro</a></li>
-<li><span class="font-body-md text-white/70 font-light flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary-container">location_on</span> Brașov, România</span></li>
-</ul>
-</div>
-</div>
-
-<div class="max-w-container-max-width mx-auto border-t border-white/10 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-white/50">
-<p>© 2026 Velsen Servicii de Curățenie Profesională. Toate drepturile rezervate.</p>
-</div>
-</footer>
+<script>document.addEventListener('DOMContentLoaded',()=>{const button=document.getElementById('menu-toggle');const menu=document.getElementById('mobile-menu');const icon=document.getElementById('menu-icon');if(button&&menu&&icon){button.addEventListener('click',()=>{const hidden=menu.classList.toggle('hidden');icon.textContent=hidden?'menu':'close';});}});</script>
+<main>
+@if($selectedService)
+@php($service = $services[$selectedService])
+<section class="service-hero-grid px-4 py-10 md:px-gutter md:py-16"><div class="mx-auto max-w-container-max-width"><a class="inline-flex items-center gap-2 text-sm font-semibold text-on-surface-variant hover:text-secondary" href="{{ route('services') }}"><span aria-hidden="true">←</span> Toate serviciile</a><p class="mt-8 font-label-caps text-xs uppercase tracking-[0.18em] text-secondary">Serviciu VELSEN</p><h1 class="mt-3 max-w-3xl text-3xl font-extrabold leading-tight text-primary md:text-5xl">{{ $service['title'] }}</h1><p class="mt-5 max-w-2xl text-lg leading-relaxed text-on-surface-variant">{{ $service['audience'] }}</p></div></section>
+<section class="px-4 py-14 md:px-gutter md:py-20"><div class="mx-auto max-w-container-max-width"><div class="grid gap-5 lg:grid-cols-3"><article class="service-card border-t-4 border-secondary bg-white p-7 shadow-sm"><span class="material-symbols-outlined text-4xl text-secondary">{{ $service['icon'] }}</span><h2 class="mt-5 text-xl font-bold text-primary">Ce este inclus</h2><p class="mt-3 leading-relaxed text-on-surface-variant">{{ $service['included'] }}</p></article><article class="service-card border-t-4 border-secondary bg-white p-7 shadow-sm"><span class="material-symbols-outlined text-4xl text-secondary">groups</span><h2 class="mt-5 text-xl font-bold text-primary">Pentru cine</h2><p class="mt-3 leading-relaxed text-on-surface-variant">{{ $service['audience'] }}</p></article><article class="service-card border-t-4 border-secondary bg-white p-7 shadow-sm"><span class="material-symbols-outlined text-4xl text-secondary">precision_manufacturing</span><h2 class="mt-5 text-xl font-bold text-primary">Echipament și metodă</h2><p class="mt-3 leading-relaxed text-on-surface-variant">{{ $service['method'] }}</p></article></div><div class="mt-10 flex flex-col items-start justify-between gap-6 bg-primary p-7 text-white md:flex-row md:items-center md:p-10"><div><p class="font-label-caps text-xs uppercase tracking-[0.18em] text-secondary-container">Următorul pas</p><h2 class="mt-2 text-2xl font-bold">Solicitați o ofertă pentru {{ $service['title'] }}</h2><p class="mt-2 text-white/75">Evaluăm locația și pregătim o soluție adaptată.</p></div><a class="shrink-0 bg-secondary px-6 py-4 font-semibold text-white hover:bg-secondary-container" href="{{ route('home') }}#contact">Cere o ofertă</a></div></div></section>
+@else
+<section class="service-hero-grid px-4 py-10 md:px-gutter md:py-16"><div class="mx-auto grid max-w-container-max-width gap-8 lg:grid-cols-[1.4fr_.6fr] lg:items-end"><div><p class="font-label-caps text-xs uppercase tracking-[0.18em] text-secondary">Servicii B2B</p><h1 class="mt-3 max-w-3xl text-3xl font-extrabold leading-tight text-primary md:text-5xl">Curățenie pentru spații care lucrează</h1><p class="mt-5 max-w-2xl text-lg leading-relaxed text-on-surface-variant">Servicii clare pentru birouri, retail, fabrici, depozite, logistică, clinici, HORECA și clădiri comerciale.</p></div><div class="border-l-2 border-secondary p-5 text-on-surface-variant"><p class="font-label-caps text-xs uppercase tracking-[0.18em] text-secondary">Standards You Can See</p><p class="mt-3 leading-relaxed">Alegeți serviciul potrivit și vedeți ce include, cui se adresează și cum lucrăm.</p></div></div></section>
+<section class="services-index-section px-4 py-14 md:px-gutter md:py-20"><div class="mx-auto max-w-container-max-width"><div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end"><div><p class="font-label-caps text-xs uppercase tracking-[0.18em] text-secondary">Expertiza noastră</p><h2 class="mt-2 text-3xl font-bold text-primary">Servicii pentru fiecare tip de spațiu</h2></div><a class="font-semibold text-secondary hover:text-primary" href="{{ route('home') }}#contact">Cere o evaluare <span aria-hidden="true">→</span></a></div><div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">@foreach($services as $slug => $service)<article class="service-card flex flex-col border border-primary/10 border-t-4 border-t-secondary bg-white p-6 shadow-sm"><div class="flex items-start justify-between gap-4"><span class="material-symbols-outlined text-4xl text-secondary">{{ $service['icon'] }}</span><span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">B2B</span></div><h2 class="mt-5 text-xl font-bold text-primary">{{ $service['title'] }}</h2><p class="mt-3 flex-1 leading-relaxed text-on-surface-variant">{{ $service['audience'] }}</p><a class="mt-6 inline-flex items-center gap-2 font-semibold text-secondary hover:text-primary" href="{{ route('services', ['service' => $slug]) }}">Vezi detalii <span aria-hidden="true">→</span></a></article>@endforeach</div></div></section>
+@endif
+</main>
+<footer class="w-full bg-primary px-4 py-10 text-white md:px-gutter md:py-14"><div class="mx-auto grid max-w-container-max-width grid-cols-1 items-start gap-8 md:grid-cols-3"><div class="max-w-sm"><div class="mb-4 flex items-center gap-3"><img alt="Velsen Logo" class="h-10 w-auto object-contain" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"><span class="text-2xl font-extrabold tracking-wide">Velsen</span></div><p class="mb-5 leading-relaxed text-white/70">Standards You Can See. Precizie, încredere și operațiuni bine coordonate.</p><div class="flex items-center gap-3"><a href="https://www.facebook.com/profile.php?id=61593313353911" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-secondary-container"><svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://www.instagram.com/velsengroup/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-secondary-container"><svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919-4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.07 4.849-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281-.059 1.69-.073 4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4z"/></svg></a><a href="https://www.linkedin.com/in/velsengroup/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-secondary-container"><svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.75-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a></div></div><div><h4 class="mb-4 font-label-caps text-xs font-bold uppercase tracking-widest text-secondary-container">Navigație Rapidă</h4><ul class="space-y-2.5"><li><a class="text-white/70 hover:text-secondary-container" href="{{ route('home') }}">Acasă</a></li><li><a class="text-white/70 hover:text-secondary-container" href="{{ route('services') }}">Servicii</a></li><li><a class="text-white/70 hover:text-secondary-container" href="/despre-noi">Despre Noi</a></li><li><a class="text-white/70 hover:text-secondary-container" href="{{ route('privacy-policy') }}">Politică de Confidențialitate</a></li><li><a class="text-white/70 hover:text-secondary-container" href="{{ route('privacy-policy') }}#cookies">Cookies Policy</a></li><li><a class="text-white/70 hover:text-secondary-container" href="{{ route('privacy-policy') }}#terms">Termeni / Legal notice</a></li></ul></div><div><h4 class="mb-4 font-label-caps text-xs font-bold uppercase tracking-widest text-secondary-container">Contact Direct</h4><ul class="space-y-2.5"><li><a class="flex items-center gap-2 font-semibold text-white/80" href="tel:+40724101196"><span class="material-symbols-outlined text-sm text-secondary-container">call</span> +40 (724) 101 196</a></li><li><a class="flex items-center gap-2 font-semibold text-white/80" href="mailto:info@veslen-group.ro"><span class="material-symbols-outlined text-sm text-secondary-container">mail</span> info@veslen-group.ro</a></li><li><span class="flex items-center gap-2 text-white/70"><span class="material-symbols-outlined text-sm text-secondary-container">location_on</span> Brașov – Sibiu – Alba</span></li><li><span class="text-white/70">VELSEN GROUP S.R.L. · CUI: de confirmat · Reg. Com.: de confirmat</span></li></ul></div></div><div class="mx-auto mt-8 max-w-container-max-width border-t border-white/10 pt-6 text-xs text-white/50">© {{ date('Y') }} VELSEN GROUP S.R.L. Toate drepturile rezervate.</div></footer>
 </div>
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const instagramLink = document.querySelector('.services-page a[aria-label="Instagram"]');
+	if (instagramLink) {
+		instagramLink.innerHTML = '<img src="/images/instagram.svg" alt="" width="20" height="20">';
+	}
+
+	document.querySelectorAll('a').forEach((link) => {
+		if (link.textContent.trim() === 'Cere o ofertă') {
+			link.closest('.mt-10')?.remove();
+		}
+	});
+});
+</script>
 </html>

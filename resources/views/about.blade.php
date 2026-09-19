@@ -184,8 +184,8 @@
         <div class="flex-1">
             <span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-3 block">Despre Velsen</span>
             <h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg leading-tight mb-4">
-                <span class="block text-primary">Standarde clinice,</span>
-                <span class="block text-secondary">Precizie absolută.</span>
+                <span class="block text-primary">Experiență olandeză,</span>
+                <span class="block text-secondary">standarde vizibile.</span>
             </h1>
         </div>
 
@@ -195,7 +195,7 @@
     </div>
 
     <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed font-light max-w-4xl">
-        La Velsen, redefinim conceptul de curățenie profesională. Nu oferim doar servicii de igienizare, ci garantăm medii sterile, sigure și impecabile pentru clienții noștri din sectorul medical, rezidențial și comercial.
+        La VELSEN, transformăm 13 ani de experiență în industria curățeniei din Țările de Jos în soluții B2B clare pentru birouri, retail, industrie, logistică, clinici, HORECA și clădiri comerciale.
     </p>
 </div>
 </section>
@@ -213,7 +213,7 @@
 <span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="verified_user">verified_user</span>
 <h3 class="text-headline-sm font-headline-sm text-primary mb-2">Rigoare și Calitate</h3>
 <p class="text-body-md font-body-md text-on-surface-variant font-light leading-relaxed">
-                            Implementăm protocoale verificate clinic pentru a garanta că fiecare suprafață este tratată cu maximă precizie.
+                            Lucrăm cu proceduri clare și verificări operaționale pentru ca fiecare suprafață să fie tratată cu precizie.
                         </p>
 </div>
 </div>
@@ -223,7 +223,7 @@
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-4" data-icon="shield">shield</span>
 <h3 class="text-headline-sm font-headline-sm text-white mb-2">Tehnologie &amp; Substanțe Certificate</h3>
 <p class="text-body-md font-body-md text-white/80 font-light leading-relaxed max-w-xl">
-                            Utilizăm echipamente de ultimă generație și dezinfectanți avizați de Ministerul Sănătății, siguri pentru mediu și non-toxici pentru populație.
+                            Alegem echipamente și materiale potrivite tipului de suprafață și cerințelor locației.
                         </p>
 </div>
 </div>
@@ -241,7 +241,7 @@
 <div class="bg-surface p-7 rounded-sm border border-outline-variant/40 flex flex-col justify-between">
 <div>
 <span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="schedule">schedule</span>
-<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Promptitudine 24/7</h3>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Programe flexibile</h3>
 <p class="text-body-md font-body-md text-on-surface-variant font-light leading-relaxed">
                             Flexibilitate maximă în organizarea schimburilor, astfel încât activitatea dumneavoastră să nu fie perturbată.
                         </p>
@@ -288,7 +288,7 @@
 <img alt="Velsen Logo" class="h-10 w-auto object-contain shrink-0" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"/>
 <span class="text-2xl font-extrabold text-white tracking-wide">Velsen</span>
 </div>
-<p class="font-body-md text-body-md text-white/70 mb-5 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
+<p class="font-body-md text-body-md text-white/70 mb-5 font-light leading-relaxed">Standards You Can See. Precizie, încredere și operațiuni bine coordonate.</p>
 <!-- Social Links -->
 <div class="flex items-center gap-3">
 <a href="https://www.facebook.com/profile.php?id=61593313353911" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary-container hover:text-white transition-all duration-300">
@@ -310,6 +310,8 @@
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/servicii">Servicii</a></li>
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/despre-noi">Despre Noi</a></li>
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}">Politică de Confidențialitate</a></li>
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}#cookies">Cookies Policy</a></li>
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}#terms">Termeni / Legal notice</a></li>
 </ul>
 </div>
 
@@ -317,8 +319,8 @@
 <h4 class="font-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs font-bold">Contact Direct</h4>
 <ul class="space-y-2.5 mb-4">
 <li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="tel:+40724101196"><span class="material-symbols-outlined text-sm text-secondary-container">call</span> +40 (724) 101 196</a></li>
-<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="mailto:info@velsengroup.ro"><span class="material-symbols-outlined text-sm text-secondary-container">mail</span> info@velsengroup.ro</a></li>
-<li><span class="font-body-md text-white/70 font-light flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary-container">location_on</span> Brașov, România</span></li>
+<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="mailto:info@veslen-group.ro"><span class="material-symbols-outlined text-sm text-secondary-container">mail</span> info@veslen-group.ro</a></li>
+<li><span class="font-body-md text-white/70 font-light flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary-container">location_on</span> Brașov – Sibiu – Alba</span></li>
 </ul>
 </div>
 </div>

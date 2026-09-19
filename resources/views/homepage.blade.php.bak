@@ -118,7 +118,7 @@
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary text-label-caps font-label-caps hover:text-secondary transition-colors duration-300" href="#">Contact</a>
 </nav>
 <button class="bg-secondary text-on-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary/90 transition-colors hidden md:block">
-            Cere o Ofertă
+            Contact
         </button>
 </header>
 <!-- Hero Section -->
@@ -149,7 +149,7 @@
 <div class="max-w-container-max-width mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 <div class="flex flex-col items-center">
 <span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="verified_user">verified_user</span>
-<span class="font-headline-md text-headline-md text-primary">100+</span>
+<span class="font-headline-md text-headline-md text-primary">13 ani</span>
 <span class="font-label-caps text-label-caps text-on-surface-variant mt-2">Clienți Corporate</span>
 </div>
 <div class="flex flex-col items-center">
@@ -164,7 +164,7 @@
 </div>
 <div class="flex flex-col items-center">
 <span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="support_agent">support_agent</span>
-<span class="font-headline-md text-headline-md text-primary">24/7</span>
+<span class="font-headline-md text-headline-md text-primary">B2B</span>
 <span class="font-label-caps text-label-caps text-on-surface-variant mt-2">Suport Dedicat</span>
 </div>
 </div>
@@ -195,7 +195,7 @@
 <span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="healing">healing</span>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Facilități Medicale</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                    Protocoale stricte de dezinfecție și sanitizare conform standardelor hospital-grade pentru clinici și laboratoare.
+                    Curățenie atentă pentru clinici și laboratoare, adaptată cerințelor fiecărei locații.
                 </p>
 <span class="text-secondary font-button-text text-button-text flex items-center gap-1 group-hover:gap-2 transition-all">
                     Detalii <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
@@ -288,7 +288,7 @@
 <footer class="w-full py-section-padding-mobile md:py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start gap-8 bg-primary dark:bg-tertiary">
 <div class="text-on-primary dark:text-on-tertiary">
 <div class="text-headline-sm font-headline-sm text-secondary mb-4">Velsen</div>
-<p class="font-body-md text-body-md text-on-primary/80 max-w-sm mb-6">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
+<p class="font-body-md text-body-md text-on-primary/80 max-w-sm mb-6">Standards You Can See. Precizie, încredere și operațiuni bine coordonate.</p>
 <p class="font-body-md text-body-md text-on-primary/60 text-sm">© 2024 Velsen Servicii de Curățenie Profesională. Toate drepturile rezervate.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">

@@ -130,7 +130,7 @@
                 Excelență Instituțională în Curățenie Profesională
             </h1>
 <p class="font-body-lg text-xs sm:text-base text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto drop-shadow font-light page-load-animate page-load-animate-delay-3 px-2">
-                Servicii de curățenie de înaltă precizie pentru facilități medicale, spații comerciale și reședințe de lux. Standarde riguroase, rezultate impecabile.
+                Curățenie B2B pentru birouri, retail, fabrici, depozite, logistică, clinici, HORECA și clădiri comerciale. Standards You Can See.
             </p>
 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 page-load-animate page-load-animate-delay-3 w-full">
 <a href="#contact" class="bg-secondary-container text-on-secondary-container font-button-text text-xs sm:text-button-text uppercase tracking-widest px-6 sm:px-7 py-3 rounded-sm shadow-md shadow-secondary/30 hover:bg-secondary-container/90 transition-all hover:shadow-lg inline-flex items-center justify-center text-center w-full sm:w-auto leading-tight">
@@ -145,17 +145,17 @@
 </section>
 
 <!-- Stats / Highlights Section -->
-<section class="bg-surface py-6 md:py-10 border-b border-primary/10 relative md:-mt-10 z-20 max-w-4xl mx-auto px-4">
+<section class="bg-white py-8 md:py-12 border-b border-primary/10 relative md:-mt-10 z-20 max-w-4xl mx-auto px-4">
 <div class="bg-white rounded-lg shadow-md shadow-primary/5 border border-primary/5 py-6 px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 text-center justify-items-center divide-y sm:divide-y-0 sm:divide-x divide-primary/10">
 <div class="flex flex-col items-center w-full pb-4 sm:pb-0">
-<span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="verified_user">verified_user</span>
-<span class="font-headline-md text-headline-md text-primary mb-0.5">100+</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Clienți Corporate</span>
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="public">public</span>
+<span class="font-headline-md text-headline-md text-primary mb-0.5">13 ani</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Experiență în Țările de Jos</span>
 </div>
 <div class="flex flex-col items-center w-full pt-4 sm:pt-0">
-<span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="support_agent">support_agent</span>
-<span class="font-headline-md text-headline-md text-primary mb-0.5">24/7</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Suport Dedicat</span>
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-2 font-light" data-icon="business">business</span>
+<span class="font-headline-md text-headline-md text-primary mb-0.5">B2B</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs">Soluții pentru business</span>
 </div>
 </div>
 </section>
@@ -164,10 +164,10 @@
 <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface px-4 md:px-gutter max-w-container-max-width mx-auto">
 <div class="text-center mb-12 flex flex-col items-center">
 <span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-2">Expertiza Noastră</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-3">Servicii Specializate</h2>
+<h2 class="font-headline-md text-headline-md text-primary mb-3">Curățenie pentru spații care lucrează</h2>
 <div class="w-12 h-0.5 bg-secondary-container mb-4"></div>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto font-light px-2">
-                Oferim soluții adaptate pentru medii care necesită cel mai înalt nivel de igienă și prezentare.
+                Planuri de curățenie construite pentru ritmul, suprafețele și cerințele operaționale ale fiecărui business.
             </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -175,9 +175,9 @@
 <a href="/servicii" class="bg-white border border-primary/5 rounded-sm p-6 md:p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary/0 group-hover:bg-secondary-container transition-all duration-300"></div>
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-5 block font-light transform group-hover:scale-105 transition-transform" data-icon="domain">domain</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Comercial &amp; Office</h3>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Birouri &amp; clădiri comerciale</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6 font-light leading-relaxed">
-                    Creăm un mediu de lucru impecabil pentru echipele dvs. și o primă impresie remarcabilă pentru clienți.
+                    Întreținere constantă pentru birouri, sedii, spații administrative și clădiri comerciale.
                 </p>
 <span class="text-primary font-button-text text-button-text uppercase tracking-wider flex items-center gap-2 group-hover:text-secondary-container transition-colors">
                     Detalii <span class="material-symbols-outlined text-base transform group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
@@ -188,9 +188,9 @@
 <div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container text-[10px] font-label-caps px-3 py-1 uppercase tracking-widest rounded-bl-sm">Specializat</div>
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container transition-all duration-300"></div>
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-5 block font-light transform group-hover:scale-105 transition-transform" data-icon="healing">healing</span>
-<h3 class="font-headline-sm text-headline-sm text-white mb-3">Facilități Medicale</h3>
+<h3 class="font-headline-sm text-headline-sm text-white mb-3">Retail &amp; HORECA</h3>
 <p class="font-body-md text-body-md text-white/80 mb-6 font-light leading-relaxed">
-                    Protocoale stricte de dezinfecție și sanitizare conform standardelor hospital-grade pentru clinici și laboratoare.
+                    Curățenie pentru magazine, restaurante, hoteluri și spații unde experiența clientului contează.
                 </p>
 <span class="text-secondary-container font-button-text text-button-text uppercase tracking-wider flex items-center gap-2 transition-colors">
                     Detalii <span class="material-symbols-outlined text-base transform group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
@@ -200,9 +200,9 @@
 <a href="/servicii" class="bg-white border border-primary/5 rounded-sm p-6 md:p-7 hover:border-secondary-container/50 transition-all duration-300 group shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer relative overflow-hidden block">
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary/0 group-hover:bg-secondary-container transition-all duration-300"></div>
 <span class="material-symbols-outlined text-secondary-container text-4xl mb-5 block font-light transform group-hover:scale-105 transition-transform" data-icon="home_work">home_work</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Reșidențial Lux</h3>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Fabrici, depozite &amp; logistică</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6 font-light leading-relaxed">
-                    Îngrijire meticuloasă pentru proprietăți premium, utilizând produse sigure și echipamente de ultimă generație.
+                    Echipamente și metode adaptate halelor, depozitelor, centrelor logistice și zonelor de producție.
                 </p>
 <span class="text-primary font-button-text text-button-text uppercase tracking-wider flex items-center gap-2 group-hover:text-secondary-container transition-colors">
                     Detalii <span class="material-symbols-outlined text-base transform group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
@@ -216,13 +216,44 @@
 </div>
 </section>
 
+<!-- Dutch Experience / Why VELSEN -->
+<section class="bg-primary text-white py-section-padding-mobile md:py-section-padding-desktop px-4 md:px-gutter">
+<div class="max-w-container-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<div>
+<span class="text-secondary-container font-label-caps text-label-caps tracking-widest uppercase mb-3 block">Experiență care se vede</span>
+<h2 class="font-headline-md text-headline-md mb-5">13 Years of Cleaning Industry Experience in the Netherlands</h2>
+<p class="text-white/75 leading-relaxed">Aducem în România experiența acumulată în industria curățeniei din Țările de Jos și o transformăm în operațiuni clare, echipe coordonate și rezultate constante pentru clienții B2B.</p>
+</div>
+<div>
+<span class="text-secondary-container font-label-caps text-label-caps tracking-widest uppercase mb-3 block">De ce VELSEN?</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+@foreach(['Experiență în industria olandeză', 'Management operațional dedicat', 'Controlul calității', 'Programe flexibile', 'Soluții B2B personalizate', 'Echipamente și materiale profesionale'] as $reason)
+<div class="border border-white/15 px-4 py-3 text-white/85">{{ $reason }}</div>
+@endforeach
+</div>
+</div>
+</div>
+</section>
+
+<!-- Team -->
+<section class="bg-surface py-section-padding-mobile md:py-section-padding-desktop px-4 md:px-gutter">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-10"><span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-2 block">Echipa VELSEN</span><h2 class="font-headline-md text-headline-md text-primary">O echipă reală, aproape de operațiuni</h2><p class="mt-3 text-on-surface-variant">Fotografiile echipei vor fi adăugate după disponibilizarea materialelor aprobate.</p></div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+@foreach([['Florin Șerban', 'Office Manager', '+40 743 097 895'], ['Simion Vlad', 'Operations Manager', '+40 743 084 714'], ['Sanziana Drăguț', 'Junior Sales Representative', '+40 743 113 012']] as [$name, $role, $phone])
+<div class="bg-white border border-primary/10 p-5 text-center">@if($name === 'Sanziana Drăguț')<img class="mx-auto mb-4 h-20 w-20 rounded-full object-cover" src="{{ asset('images/WhatsApp Image 2026-09-17 at 3.36.32 PM.jpeg') }}" alt="Sanziana Drăguț">@elseif($name === 'Florin Șerban')<img class="mx-auto mb-4 h-20 w-20 rounded-full object-cover" src="{{ asset('images/WhatsApp Image 2026-09-17 at 3.38.24 PM.jpeg') }}" alt="Florin Șerban">@elseif($name === 'Simion Vlad')<img class="mx-auto mb-4 h-20 w-20 rounded-full object-cover" src="{{ asset('images/WhatsApp Image 2026-09-17 at 3.39.13 PM.jpeg') }}" alt="Simion Vlad">@else<div class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white">{{ substr($name, 0, 1) }}</div>@endif<h3 class="font-headline-sm text-primary">{{ $name }}</h3><p class="text-sm text-on-surface-variant">{{ $role }}</p>@if($phone)<a class="mt-2 block text-sm font-semibold text-secondary hover:text-primary" href="tel:{{ str_replace([' ', '+'], ['', '+'], $phone) }}">{{ $phone }}</a>@endif</div>
+@endforeach
+</div>
+</div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="bg-white py-section-padding-mobile md:py-section-padding-desktop border-t border-primary/5 px-4">
 <div class="max-w-container-max-width mx-auto px-2 text-center">
 <span class="text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-2 block">Consultație</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-4">Contactați-ne Pentru o Evaluare Gratuită</h2>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Request a Site Evaluation</h2>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-    Fiecare spațiu are nevoi unice. Echipa Velsen vă stă la dispoziție pentru a stabili un plan optim de curățenie profesională.
+    Spuneți-ne ce tip de spațiu administrați și construim împreună un plan de curățenie B2B potrivit.
 </p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="bg-surface p-6 rounded-sm border border-primary/10 shadow-sm flex flex-col items-center text-center group hover:border-secondary/30 transition-all duration-300">
@@ -237,14 +268,14 @@
 <span class="material-symbols-outlined text-2xl" data-icon="mail">mail</span>
 </div>
 <span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-1">Email</span>
-<a href="mailto:info@velsengroup.ro" class="font-body-md text-lg text-primary font-bold hover:text-secondary transition-colors">info@velsengroup.ro</a>
+<a href="mailto:info@veslen-group.ro" class="font-body-md text-lg text-primary font-bold hover:text-secondary transition-colors">info@veslen-group.ro</a>
 </div>
 <div class="bg-surface p-6 rounded-sm border border-primary/10 shadow-sm flex flex-col items-center text-center group hover:border-secondary/30 transition-all duration-300">
 <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center border border-primary/10 mb-4 text-secondary shadow-sm group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
 </div>
 <span class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-xs mb-1">Sediu Central</span>
-<span class="font-body-md text-lg text-primary font-bold">Brașov, România</span>
+<span class="font-body-md text-lg text-primary font-bold">Brașov – Sibiu – Alba</span>
 </div>
 </div>
 </div>
@@ -258,7 +289,7 @@
 <img alt="Velsen Logo" class="h-10 w-auto object-contain shrink-0" src="{{ \App\Models\SiteSetting::url('logo_img', 'images/logo.webp') }}"/>
 <span class="text-2xl font-extrabold text-white tracking-wide">Velsen</span>
 </div>
-<p class="font-body-md text-body-md text-white/70 mb-5 font-light leading-relaxed">Standardul de aur în curățenia profesională. Precizie, încredere și excelență instituțională.</p>
+<p class="font-body-md text-body-md text-white/70 mb-5 font-light leading-relaxed">Standards You Can See. Precizie, încredere și operațiuni bine coordonate.</p>
 <!-- Social Links -->
 <div class="flex items-center gap-3">
 <a href="https://www.facebook.com/profile.php?id=61593313353911" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary-container hover:text-white transition-all duration-300">
@@ -280,6 +311,8 @@
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/servicii">Servicii</a></li>
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="/despre-noi">Despre Noi</a></li>
 <li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}">Politică de Confidențialitate</a></li>
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}#cookies">Cookies Policy</a></li>
+<li><a class="font-body-md text-white/70 hover:text-secondary-container transition-colors font-light" href="{{ route('privacy-policy') }}#terms">Termeni / Legal notice</a></li>
 </ul>
 </div>
 
@@ -287,14 +320,14 @@
 <h4 class="font-label-caps text-secondary-container mb-4 uppercase tracking-widest text-xs font-bold">Contact Direct</h4>
 <ul class="space-y-2.5 mb-4">
 <li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="tel:+40724101196"><span class="material-symbols-outlined text-sm text-secondary-container">call</span> +40 (724) 101 196</a></li>
-<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="mailto:info@velsengroup.ro"><span class="material-symbols-outlined text-sm text-secondary-container">mail</span> info@velsengroup.ro</a></li>
-<li><span class="font-body-md text-white/70 font-light flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary-container">location_on</span> Brașov, România</span></li>
+<li><a class="font-body-md text-white/80 hover:text-secondary-container transition-colors font-semibold flex items-center gap-2" href="mailto:info@veslen-group.ro"><span class="material-symbols-outlined text-sm text-secondary-container">mail</span> info@veslen-group.ro</a></li>
+<li><span class="font-body-md text-white/70 font-light flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary-container">location_on</span> Brașov – Sibiu – Alba</span></li>
 </ul>
 </div>
 </div>
 
 <div class="max-w-container-max-width mx-auto border-t border-white/10 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-white/50">
-<p>© 2026 Velsen Servicii de Curățenie Profesională. Toate drepturile rezervate.</p>
+<p>© {{ date('Y') }} VELSEN GROUP S.R.L. Toate drepturile rezervate.</p>
 </div>
 </footer>
 </div>

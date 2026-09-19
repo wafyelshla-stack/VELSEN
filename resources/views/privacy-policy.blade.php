@@ -73,8 +73,8 @@
                 <address class="mt-4 not-italic">
                     <strong class="text-primary">VELSEN GROUP S.R.L.</strong><br>
                     Phone: <a class="font-semibold text-secondary hover:text-primary" href="tel:+40724101196">+40 (724) 101 196</a><br>
-                    Email: <a class="font-semibold text-secondary hover:text-primary" href="mailto:info@velsengroup.ro">info@velsengroup.ro</a><br>
-                    Brașov, Romania
+                    Email: <a class="font-semibold text-secondary hover:text-primary" href="mailto:info@veslen-group.ro">info@veslen-group.ro</a><br>
+                    Brașov – Sibiu – Alba, Romania
                 </address>
             </section>
 
